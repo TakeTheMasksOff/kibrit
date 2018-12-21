@@ -1,0 +1,53 @@
+/**
+ * Yii mailchimp form
+ *
+ * @author Marc Oliveras Galvez <oligalma@gmail.com> 
+ * @link http://www.oligalma.com
+ * @copyright 2016 Oligalma
+ * @license New BSD License
+ */
+
+#subscribe-div
+{
+    max-width:200px;
+    border:1px solid black;
+    border-radius:5px;
+    background:black;
+    padding:5px;
+    text-align:center;
+}
+
+#subscribe-submit
+{
+    padding:5px;
+    font-weight:bold;
+    font-size:20px;
+}
+
+.subscribe-label
+{
+    color:white;
+    font-weight:bold;
+}
+
+.subscribe-green
+{
+    color:lime;
+}
+
+.subscribe-red
+{
+    color:red;
+}
+   
+#subscribe-message
+{
+    margin-bottom:10px;
+    font-weight:bold;   
+}   
+      
+#subscribe-email, #subscribe-first-name, #subscribe-last-name
+{
+/*    margin-bottom:0px;
+    width:95%;*/
+}

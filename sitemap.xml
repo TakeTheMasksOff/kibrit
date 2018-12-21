@@ -1,0 +1,901 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>http://kibrit.tech</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru" />
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/en/history</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/history" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/history" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/history" />
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/en/philosophy</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/philosophy" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/philosophy" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/philosophy" />
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/en/partners</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/partners" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/partners" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/partners" />
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/en/certificates</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/certificates" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/certificates" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/certificates" />
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/en/team</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/team" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/team" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/team" />
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/en/blog</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/blog" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/blog" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/blog" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/en/contacts</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/contacts" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/contacts" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/contacts" />
+        <changefreq>yearly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/en/works#!mobile-devices-registration-system</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!mobile-devices-registration-system" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!mobile-devices-registration-system" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!mobile-devices-registration-system" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/en/works#!sems-call-centerbased-customer-relationship-management-crm-system</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!sems-call-centerbased-customer-relationship-management-crm-system" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!sems-call-centerbased-customer-relationship-management-crm-system" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!sems-call-centerbased-customer-relationship-management-crm-system" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/en/works#!orangeline-call-center-management-system</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!orangeline-call-center-management-system" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!orangeline-call-center-management-system" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!orangeline-call-center-management-system" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/en/works#!parlaq_zeka</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!parlaq_zeka" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!parlaq_zeka" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!parlaq_zeka" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/en/works#!azsigorta</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!azsigorta" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!azsigorta" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!azsigorta" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/en/works#!asan_service</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!asan_service" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!asan_service" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!asan_service" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/en/works#!software-hardwaresolutions-it-integration-it-outsourcing</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!software-hardwaresolutions-it-integration-it-outsourcing" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!software-hardwaresolutions-it-integration-it-outsourcing" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!software-hardwaresolutions-it-integration-it-outsourcing" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/en/works#!turnkey-it-infrastructureof-business-center</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!turnkey-it-infrastructureof-business-center" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!turnkey-it-infrastructureof-business-center" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!turnkey-it-infrastructureof-business-center" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/en/works#!corporate-itinfrastructure-distributed-network-information-security</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!corporate-itinfrastructure-distributed-network-information-security" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!corporate-itinfrastructure-distributed-network-information-security" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!corporate-itinfrastructure-distributed-network-information-security" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/en/works#!knauf</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!knauf" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!knauf" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!knauf" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/en/works#!coca_cola_fanta</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!coca_cola_fanta" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!coca_cola_fanta" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!coca_cola_fanta" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/en/works#!timwe_group</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!timwe_group" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!timwe_group" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!timwe_group" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/en/works#!yeni_hayat</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!yeni_hayat" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!yeni_hayat" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!yeni_hayat" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/en/works#!fault-tolerant-hardwaresoftware-complex-it-outsourcing</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!fault-tolerant-hardwaresoftware-complex-it-outsourcing" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!fault-tolerant-hardwaresoftware-complex-it-outsourcing" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!fault-tolerant-hardwaresoftware-complex-it-outsourcing" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/en/works#!call-center-on-basis-ofip-telephony-it-outsourcing</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!call-center-on-basis-ofip-telephony-it-outsourcing" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!call-center-on-basis-ofip-telephony-it-outsourcing" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!call-center-on-basis-ofip-telephony-it-outsourcing" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/en/works#!million</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!million" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!million" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!million" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/en/works#!zeytun_pharmaceuticals</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!zeytun_pharmaceuticals" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!zeytun_pharmaceuticals" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!zeytun_pharmaceuticals" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/en/works#!c141</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!c141" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!c141" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!c141" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/en/works#!loccitane</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!loccitane" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!loccitane" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!loccitane" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/en/works#!mlab</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!mlab" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!mlab" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!mlab" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/en/products#!aramis</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/products#!aramis" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/products#!aramis" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/products#!aramis" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/en/products#!border</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/products#!border" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/products#!border" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/products#!border" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/en/products#!orange</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/products#!orange" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/products#!orange" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/products#!orange" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/en/products#!onepoint</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/products#!onepoint" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/products#!onepoint" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/products#!onepoint" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/en/services#!software-development</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/services#!software-development" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/services#!software-development" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/services#!software-development" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/en/services#!bms-systems-development</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/services#!bms-systems-development" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/services#!bms-systems-development" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/services#!bms-systems-development" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/en/services#!it-integration</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/services#!it-integration" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/services#!it-integration" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/services#!it-integration" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/en/services#!it-audit-consulting</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/services#!it-audit-consulting" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/services#!it-audit-consulting" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/services#!it-audit-consulting" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/en/services#!it-outsourcing</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/services#!it-outsourcing" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/services#!it-outsourcing" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/services#!it-outsourcing" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/en/blog/pervyy-shag-na-dolgom-puti</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/blog/pervyy-shag-na-dolgom-puti" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/blog/pervyy-shag-na-dolgom-puti" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/blog/pervyy-shag-na-dolgom-puti" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/az/history</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/history" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/history" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/history" />
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/az/philosophy</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/philosophy" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/philosophy" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/philosophy" />
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/az/partners</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/partners" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/partners" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/partners" />
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/az/certificates</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/certificates" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/certificates" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/certificates" />
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/az/team</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/team" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/team" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/team" />
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/az/blog</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/blog" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/blog" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/blog" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/az/contacts</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/contacts" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/contacts" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/contacts" />
+        <changefreq>yearly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/az/works#!mobile-devices-registration-system</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!mobile-devices-registration-system" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!mobile-devices-registration-system" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!mobile-devices-registration-system" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/az/works#!sems-call-centerbased-customer-relationship-management-crm-system</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!sems-call-centerbased-customer-relationship-management-crm-system" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!sems-call-centerbased-customer-relationship-management-crm-system" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!sems-call-centerbased-customer-relationship-management-crm-system" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/az/works#!orangeline-call-center-management-system</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!orangeline-call-center-management-system" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!orangeline-call-center-management-system" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!orangeline-call-center-management-system" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/az/works#!parlaq_zeka</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!parlaq_zeka" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!parlaq_zeka" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!parlaq_zeka" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/az/works#!azsigorta</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!azsigorta" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!azsigorta" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!azsigorta" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/az/works#!asan_service</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!asan_service" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!asan_service" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!asan_service" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/az/works#!software-hardwaresolutions-it-integration-it-outsourcing</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!software-hardwaresolutions-it-integration-it-outsourcing" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!software-hardwaresolutions-it-integration-it-outsourcing" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!software-hardwaresolutions-it-integration-it-outsourcing" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/az/works#!turnkey-it-infrastructureof-business-center</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!turnkey-it-infrastructureof-business-center" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!turnkey-it-infrastructureof-business-center" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!turnkey-it-infrastructureof-business-center" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/az/works#!corporate-itinfrastructure-distributed-network-information-security</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!corporate-itinfrastructure-distributed-network-information-security" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!corporate-itinfrastructure-distributed-network-information-security" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!corporate-itinfrastructure-distributed-network-information-security" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/az/works#!knauf</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!knauf" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!knauf" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!knauf" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/az/works#!coca_cola_fanta</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!coca_cola_fanta" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!coca_cola_fanta" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!coca_cola_fanta" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/az/works#!timwe_group</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!timwe_group" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!timwe_group" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!timwe_group" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/az/works#!yeni_hayat</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!yeni_hayat" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!yeni_hayat" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!yeni_hayat" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/az/works#!fault-tolerant-hardwaresoftware-complex-it-outsourcing</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!fault-tolerant-hardwaresoftware-complex-it-outsourcing" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!fault-tolerant-hardwaresoftware-complex-it-outsourcing" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!fault-tolerant-hardwaresoftware-complex-it-outsourcing" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/az/works#!call-center-on-basis-ofip-telephony-it-outsourcing</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!call-center-on-basis-ofip-telephony-it-outsourcing" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!call-center-on-basis-ofip-telephony-it-outsourcing" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!call-center-on-basis-ofip-telephony-it-outsourcing" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/az/works#!million</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!million" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!million" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!million" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/az/works#!zeytun_pharmaceuticals</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!zeytun_pharmaceuticals" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!zeytun_pharmaceuticals" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!zeytun_pharmaceuticals" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/az/works#!c141</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!c141" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!c141" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!c141" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/az/works#!loccitane</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!loccitane" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!loccitane" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!loccitane" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/az/works#!mlab</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!mlab" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!mlab" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!mlab" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/az/products#!aramis</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/products#!aramis" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/products#!aramis" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/products#!aramis" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/az/products#!border</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/products#!border" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/products#!border" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/products#!border" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/az/products#!orange</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/products#!orange" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/products#!orange" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/products#!orange" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/az/products#!onepoint</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/products#!onepoint" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/products#!onepoint" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/products#!onepoint" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/az/services#!software-development</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/services#!software-development" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/services#!software-development" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/services#!software-development" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/az/services#!bms-systems-development</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/services#!bms-systems-development" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/services#!bms-systems-development" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/services#!bms-systems-development" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/az/services#!it-integration</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/services#!it-integration" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/services#!it-integration" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/services#!it-integration" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/az/services#!it-audit-consulting</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/services#!it-audit-consulting" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/services#!it-audit-consulting" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/services#!it-audit-consulting" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/az/services#!it-outsourcing</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/services#!it-outsourcing" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/services#!it-outsourcing" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/services#!it-outsourcing" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/az/blog/pervyy-shag-na-dolgom-puti</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/blog/pervyy-shag-na-dolgom-puti" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/blog/pervyy-shag-na-dolgom-puti" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/blog/pervyy-shag-na-dolgom-puti" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/ru/history</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/history" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/history" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/history" />
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/ru/philosophy</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/philosophy" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/philosophy" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/philosophy" />
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/ru/partners</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/partners" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/partners" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/partners" />
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/ru/certificates</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/certificates" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/certificates" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/certificates" />
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/ru/team</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/team" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/team" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/team" />
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/ru/blog</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/blog" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/blog" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/blog" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/ru/contacts</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/contacts" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/contacts" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/contacts" />
+        <changefreq>yearly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/ru/works#!mobile-devices-registration-system</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!mobile-devices-registration-system" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!mobile-devices-registration-system" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!mobile-devices-registration-system" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/ru/works#!sems-call-centerbased-customer-relationship-management-crm-system</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!sems-call-centerbased-customer-relationship-management-crm-system" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!sems-call-centerbased-customer-relationship-management-crm-system" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!sems-call-centerbased-customer-relationship-management-crm-system" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/ru/works#!orangeline-call-center-management-system</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!orangeline-call-center-management-system" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!orangeline-call-center-management-system" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!orangeline-call-center-management-system" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/ru/works#!parlaq_zeka</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!parlaq_zeka" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!parlaq_zeka" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!parlaq_zeka" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/ru/works#!azsigorta</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!azsigorta" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!azsigorta" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!azsigorta" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/ru/works#!asan_service</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!asan_service" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!asan_service" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!asan_service" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/ru/works#!software-hardwaresolutions-it-integration-it-outsourcing</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!software-hardwaresolutions-it-integration-it-outsourcing" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!software-hardwaresolutions-it-integration-it-outsourcing" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!software-hardwaresolutions-it-integration-it-outsourcing" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/ru/works#!turnkey-it-infrastructureof-business-center</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!turnkey-it-infrastructureof-business-center" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!turnkey-it-infrastructureof-business-center" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!turnkey-it-infrastructureof-business-center" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/ru/works#!corporate-itinfrastructure-distributed-network-information-security</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!corporate-itinfrastructure-distributed-network-information-security" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!corporate-itinfrastructure-distributed-network-information-security" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!corporate-itinfrastructure-distributed-network-information-security" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/ru/works#!knauf</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!knauf" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!knauf" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!knauf" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/ru/works#!coca_cola_fanta</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!coca_cola_fanta" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!coca_cola_fanta" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!coca_cola_fanta" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/ru/works#!timwe_group</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!timwe_group" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!timwe_group" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!timwe_group" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/ru/works#!yeni_hayat</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!yeni_hayat" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!yeni_hayat" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!yeni_hayat" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/ru/works#!fault-tolerant-hardwaresoftware-complex-it-outsourcing</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!fault-tolerant-hardwaresoftware-complex-it-outsourcing" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!fault-tolerant-hardwaresoftware-complex-it-outsourcing" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!fault-tolerant-hardwaresoftware-complex-it-outsourcing" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/ru/works#!call-center-on-basis-ofip-telephony-it-outsourcing</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!call-center-on-basis-ofip-telephony-it-outsourcing" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!call-center-on-basis-ofip-telephony-it-outsourcing" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!call-center-on-basis-ofip-telephony-it-outsourcing" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/ru/works#!million</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!million" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!million" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!million" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/ru/works#!zeytun_pharmaceuticals</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!zeytun_pharmaceuticals" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!zeytun_pharmaceuticals" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!zeytun_pharmaceuticals" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/ru/works#!c141</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!c141" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!c141" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!c141" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/ru/works#!loccitane</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!loccitane" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!loccitane" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!loccitane" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/ru/works#!mlab</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/works#!mlab" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/works#!mlab" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/works#!mlab" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/ru/products#!aramis</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/products#!aramis" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/products#!aramis" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/products#!aramis" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/ru/products#!border</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/products#!border" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/products#!border" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/products#!border" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/ru/products#!orange</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/products#!orange" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/products#!orange" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/products#!orange" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/ru/products#!onepoint</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/products#!onepoint" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/products#!onepoint" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/products#!onepoint" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/ru/services#!software-development</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/services#!software-development" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/services#!software-development" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/services#!software-development" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/ru/services#!bms-systems-development</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/services#!bms-systems-development" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/services#!bms-systems-development" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/services#!bms-systems-development" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/ru/services#!it-integration</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/services#!it-integration" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/services#!it-integration" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/services#!it-integration" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/ru/services#!it-audit-consulting</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/services#!it-audit-consulting" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/services#!it-audit-consulting" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/services#!it-audit-consulting" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/ru/services#!it-outsourcing</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/services#!it-outsourcing" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/services#!it-outsourcing" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/services#!it-outsourcing" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://kibrit.tech/ru/blog/pervyy-shag-na-dolgom-puti</loc>
+        <xhtml:link rel="alternate" hreflang="az" href="http://kibrit.tech/az/blog/pervyy-shag-na-dolgom-puti" />
+        <xhtml:link rel="alternate" hreflang="en" href="http://kibrit.tech/en/blog/pervyy-shag-na-dolgom-puti" />
+        <xhtml:link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru/blog/pervyy-shag-na-dolgom-puti" />
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+</urlset>

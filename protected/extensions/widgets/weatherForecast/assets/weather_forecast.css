@@ -1,0 +1,33 @@
+/* SVN FILE: $Id: weather_forecast.css 9 2009-10-13 13:20:24Z Chris $ */
+/**
+ * Weather Forecast CSS
+ *
+ * @copyright    Copyright 2009 PBM Web Development - All Rights Reserved
+ * @package      weatherForecast
+ * @since        V1.0.0
+ * @version      $Revision: 9 $
+ * @modifiedby   $LastChangedBy: Chris $
+ * @lastmodified $Date: 2009-10-13 14:20:24 +0100 (Tue, 13 Oct 2009) $
+ * @license      http://www.opensource.org/licenses/bsd-license.php The BSD License
+ */
+.weather-forecast {
+  float: left;
+  font-size: 90%;
+  margin-right: 0;
+  margin-top: 1em;
+  padding: 1em 1.5%;
+  width: 28%;
+}
+.weather-forecast th,
+.weather-forecast td {
+  padding: 0.375em 5px;
+  text-align: center;
+}
+.weather-forecast tfoot tr,
+.weather-forecast tr.even {
+  background-color: transparent;
+}
+.weather-forecast tfoot {
+  font-size: 80%;
+  font-style: italic;
+}

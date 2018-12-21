@@ -1,0 +1,2 @@
+type normalize.css bootstrap.css styles.css font-awesome.min.css > merged.css
+call java -jar "C:/OSPanel/domains/kibrit/protected/extensions/packagecompressor/yuicompressor/yuicompressor-2.4.7.jar" "merged.css" -o "C:/OSPanel/domains/kibrit/assets/css/merged.min.css"
