@@ -131,7 +131,7 @@
 
                   <div class="form-group row">
                       <div class="col-md-12">
-                          <button type="submit" class="rectangle-90 RequestPresentationForm" style="border: solid 2px #E44850;">
+                          <button type="submit" class="outlined-btn RequestPresentationForm" style="border: solid 2px #E44850;">
                             <?php echo Yii::t('frontend.strings','Send');?>
                           </button>
                       </div>

@@ -2789,7 +2789,7 @@ d.parent(".dropdown-menu").length&&(d=d.closest("li.dropdown").addClass("active"
 
 jQuery(document).ready(function($){
 
-    jQuery("#content-block").on("click", "button.rectangle-90", function(event){
+    jQuery("#content-block").on("click", "button.outlined-btn", function(event){
         $(".hideEl").toggle();
 	    	var productName = $( "h2.presenReq" ).text();
 	      	$( "#RequestPresentationForm_productName" ).val(productName);

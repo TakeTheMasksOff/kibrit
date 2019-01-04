@@ -463,7 +463,7 @@ f=new sa(C,u,C[u],D,f),u in A&&(f.e=A[u]),f.xs0=0,f.plugin=h,d._overwriteProps.p
 jQuery(document).ready(function($){
 
 
-    jQuery("#content-block").on("click", "button.rectangle-90", function(event){
+    jQuery("#content-block").on("click", "button.outlined-btn", function(event){
         $(".hideEl").toggle();
 	    	var productName = $( "h2.presenReq" ).text();
 	      	$( "#RequestPresentationForm_productName" ).val(productName);
