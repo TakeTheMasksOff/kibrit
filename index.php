@@ -116,10 +116,28 @@ header("Location: http://" . $_SERVER['HTTP_HOST'] .$lang."/works#!fault-toleran
 die("Redirect");
 }
 
-    $urlPaths = split('/',$lowerURI);
-    //$url = ' http://'.$_SERVER['SERVER_NAME'].'/'.$urlPaths[1].'/'.$urlPaths[2].'/'.escapeshellcmd($_GET['_escaped_fragment_']);
-// Возвращаем страницы ajax-приложения
-if (!isset($_GET['_escaped_fragment_'])) {
+//     $urlPaths = split('/',$lowerURI);
+//     //$url = ' http://'.$_SERVER['SERVER_NAME'].'/'.$urlPaths[1].'/'.$urlPaths[2].'/'.escapeshellcmd($_GET['_escaped_fragment_']);
+// // Возвращаем страницы ajax-приложения
+// if (!isset($_GET['_escaped_fragment_'])) {
+//     // Подключаем конфигурационный файл
+//     $config=dirname(__FILE__).'/protected/config/main.php';
+//     // Подключаем фреймворк Yii
+//     $yii=dirname(__FILE__).'/yoo/framework/yii.php';
+//     require_once($yii);
+//     // Создаем экземпляр объекта веб-приложения и запускаем его
+//     Yii::createWebApplication($config)->run();
+// // Обработка Google Ajax Crawler
+// } else {
+//     $url = ' http://'.$_SERVER['SERVER_NAME'].'/'.$urlPaths[1].'/'.$urlPaths[2].'/'.escapeshellcmd($_GET['_escaped_fragment_']);
+//    // print_r('java -jar htmlunit/htmlunit.jar '.$url);
+//     // Запрашиваем снимок страницы у HtmlUnit
+//     putenv('LANG=ru_RU.UTF-8');
+//     $result = shell_exec('java -jar htmlunit/htmlunit.jar '.$url);
+//     echo $result;
+// }
+
+
     // Подключаем конфигурационный файл
     $config=dirname(__FILE__).'/protected/config/main.php';
     // Подключаем фреймворк Yii
@@ -127,12 +145,3 @@ if (!isset($_GET['_escaped_fragment_'])) {
     require_once($yii);
     // Создаем экземпляр объекта веб-приложения и запускаем его
     Yii::createWebApplication($config)->run();
-// Обработка Google Ajax Crawler
-} else {
-    $url = ' http://'.$_SERVER['SERVER_NAME'].'/'.$urlPaths[1].'/'.$urlPaths[2].'/'.escapeshellcmd($_GET['_escaped_fragment_']);
-   // print_r('java -jar htmlunit/htmlunit.jar '.$url);
-    // Запрашиваем снимок страницы у HtmlUnit
-    putenv('LANG=ru_RU.UTF-8');
-    $result = shell_exec('java -jar htmlunit/htmlunit.jar '.$url);
-    echo $result;
-}
