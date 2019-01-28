@@ -7861,7 +7861,7 @@ footer {
 .projects-container .cd-single-project span { 
     font-size: 48px;
 }
-.projects-container .cd-single-project .see-more { 
+.projects-container .cd-single-project .details { 
     position: absolute;
     opacity: 0;
     left: 50%;
@@ -7874,7 +7874,7 @@ footer {
     width: 80%;
 }
 
-.projects-container .cd-single-project:hover .see-more { 
+.projects-container .cd-single-project:hover .details { 
     position: relative;
     opacity: 1;
 }
@@ -8250,7 +8250,7 @@ footer {
         float: none;
         width: auto;
     }
-        .projects-container .cd-single-project .see-more { 
+        .projects-container .cd-single-project .details { 
         position: absolute;
         opacity: 0;
         left: 50%;
@@ -8263,7 +8263,7 @@ footer {
         width: 80%;
     }
 
-    .projects-container .cd-single-project:hover .see-more { 
+    .projects-container .cd-single-project:hover .details { 
         position: relative;
         opacity: 1;
     }

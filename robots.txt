@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 Host: http://kibrit.tech
-Sitemap: http://kibrit.tech/sitemap.xml
+Sitemap: http://kibrit.tech/sitemap4.xml

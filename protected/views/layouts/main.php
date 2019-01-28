@@ -21,6 +21,7 @@
         <meta property="og:description" <?php if (!empty($this->pageDescription)){echo 'content="' . $this->pageDescription . '"';}?>/> 
         <meta property="og:url" content="<?=Yii::app()->request->hostInfo.Yii::app()->request->url?>" /> 
         <meta property="og:image" content="http://kibrit.tech/assets/images/about.jpg" />
+        <meta name="google-site-verification" content="d3lYmjqI7ptbWGYQF2MS6ibRQlMnibLLv76fz9Jk25w" /> <!-- for Google Search Console. Verification-->
 
         <!-- Google Tag Manager -->
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

@@ -36,7 +36,7 @@
     </script>
 
 
-<header <?php if (Yii::app()->controller->action->id!=='index' && Yii::app()->controller->action->id!=='philosophy'):?> class="shadow"<?php endif;?> >
+<header <?php if (Yii::app()->controller->action->id!=='index' && Yii::app()->controller->action->id!=='philosophy'):?> class="my-shadow"<?php endif;?> >
     <div id="logo"><a href="http://kibrit.tech"></a></div>
     <span class="cd-nav-trigger" style="cursor:pointer" onclick="openNav()"><?php echo (Utilities::t('Menu'));?> <i class="icon-group" aria-hidden="true"></i></span>
 </header>

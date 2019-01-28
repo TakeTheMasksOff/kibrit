@@ -2803,12 +2803,12 @@ jQuery(document).ready(function($){
 		openRightBlock();
 	});
 
-	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-	   $(".cd-title").click(function(){
-	   	  $(".see-more").css("opacity", "0");
-	      $(this).find(".see-more").css("opacity", "1");
-	   });
-	}
+	// if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+	//    $(".cd-title").click(function(){
+	//    	  $(".details").css("opacity", "0");
+	//       $(this).find(".details").css("opacity", "1");
+	//    });
+	// }
 
 	$(document).mouseup(function(event) {
 		if ($(event.target).closest("#rightBlock").length || $("#rightBlock").css("width") == "0px") return;
