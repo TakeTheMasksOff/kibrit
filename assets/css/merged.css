@@ -7550,7 +7550,7 @@ footer {
   width: 80px;
 }
 
-.rectangle-90 {
+.outlined-btn {
   width: 205px;
   height: 46px;
   border: 2px solid #fff;
@@ -9320,7 +9320,7 @@ form input.error {
     /*    display: none;*/
         color: #FFF;
     }
-    .rectangle-90 {
+    .outlined-btn {
         width: 88px;
         height: 26px;
         border: 2px solid #fff;
@@ -9340,7 +9340,7 @@ form input.error {
         line-height: 1.6;
         text-align: center;
    }
-    #content-block .rectangle-90 {
+    #content-block .outlined-btn {
         font-size: 13px !important;
         height: 34px;
         width: auto;

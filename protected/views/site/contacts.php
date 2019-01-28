@@ -107,7 +107,7 @@ JAVASCRIPT;
 
               <div class="form-group row">
                   <div class="col-md-12">
-                      <button type="submit" class="rectangle-90 contactFormSubmit" onclick="DisableButton(this);" style="border: solid 2px #fe9901;">
+                      <button type="submit" class="outlined-btn contactFormSubmit" onclick="DisableButton(this);" style="border: solid 2px #fe9901;">
                         <?php echo Yii::t('frontend.strings','Send');?>
                       </button>
                   </div>

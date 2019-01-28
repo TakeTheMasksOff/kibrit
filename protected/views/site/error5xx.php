@@ -21,8 +21,8 @@
             		<p style="width: 500px;">При обработке запроса произошла ошибка на сервере или превышен лимит времени обработки. Попробуйте повторорить Ваши действия снова.</p>
 
         			<br>
-                    <button type="submit" class="rectangle-90 contactFormSubmit" onclick="DisableButton(this);" style="border: solid 2px #fe9901;"><?php echo CHtml::link(Utilities::uppercase(Yii::t('frontend.strings','Return to home')),$this->createUrl('site/index',array('language'=>$this->Lang)));?></button>
-                  	<button type="submit" class="rectangle-90 contactFormSubmit" onclick="DisableButton(this);" style="border: solid 2px #fe9901;"><?php echo CHtml::link(Utilities::uppercase(Yii::t('frontend.strings','contactus')),$this->createUrl('site/contacts',array('language'=>$this->Lang)));?></button>
+                    <button type="submit" class="outlined-btn contactFormSubmit" onclick="DisableButton(this);" style="border: solid 2px #fe9901;"><?php echo CHtml::link(Utilities::uppercase(Yii::t('frontend.strings','Return to home')),$this->createUrl('site/index',array('language'=>$this->Lang)));?></button>
+                  	<button type="submit" class="outlined-btn contactFormSubmit" onclick="DisableButton(this);" style="border: solid 2px #fe9901;"><?php echo CHtml::link(Utilities::uppercase(Yii::t('frontend.strings','contactus')),$this->createUrl('site/contacts',array('language'=>$this->Lang)));?></button>
           </div>
           <div class="col-md-2 col-lg-2">
           </div>

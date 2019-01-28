@@ -63,21 +63,23 @@ class Controller extends CController
 				// $clientScript->registerCoreScript('jquery');
 
 				// $clientScript->registerScriptFile('/assets/javascripts/jquery.min.js');
-				// $clientScript->registerScriptFile('/assets/javascripts/base64.js');
-				// $clientScript->registerScriptFile('/assets/javascripts/content.js');
+				$clientScript->registerScriptFile('/assets/javascripts/jquery-3.3.1.min.js');
+				$clientScript->registerScriptFile('/assets/javascripts/popper.js');
+				$clientScript->registerScriptFile('/assets/javascripts/base64.js');
+				$clientScript->registerScriptFile('/assets/javascripts/content.js');
     //             // $clientScript->registerScriptFile('/assets/javascripts/modernizr.custom.79639.js');
-    //             $clientScript->registerScriptFile('/assets/javascripts/modernizr.js');
-    //             $clientScript->registerScriptFile('/assets/javascripts/TweenMax.min.js');
-    //             $clientScript->registerScriptFile('/assets/javascripts/codyhouse.js');
-    //             $clientScript->registerScriptFile('/assets/javascripts/bootstrap.min.js');
-    //             $clientScript->registerScriptFile('/assets/javascripts/main.js');
+                $clientScript->registerScriptFile('/assets/javascripts/modernizr.js');
+                $clientScript->registerScriptFile('/assets/javascripts/TweenMax.min.js');
+                $clientScript->registerScriptFile('/assets/javascripts/codyhouse.js');
+                $clientScript->registerScriptFile('/assets/javascripts/bootstrap.min.js');
+                $clientScript->registerScriptFile('/assets/javascripts/main.js');
 
-    //             $clientScript->registerCssFile('/assets/css/normalize.css');
-    //         //    $clientScript->registerCssFile('/assets/css/bootstrap.css');
-				// $clientScript->registerCSSFile('/assets/css/styles.css');
-				// $clientScript->registerCSSFile('/assets/css/font-awesome.min.css');
-                 $clientScript->registerCssFile('/assets/css/merged.min.css');
-                 $clientScript->registerScriptFile('/assets/javascripts/merged.min.js');
+                $clientScript->registerCssFile('/assets/css/normalize.css');
+                $clientScript->registerCssFile('/assets/css/bootstrap.css');
+				$clientScript->registerCSSFile('/assets/css/styles.css');
+				$clientScript->registerCSSFile('/assets/css/font-awesome.min.css');
+                // $clientScript->registerCssFile('/assets/css/merged.min.css');
+                // $clientScript->registerScriptFile('/assets/javascripts/merged.min.js');
 
 
 		$this->imgUpl['gallery']= '/images/gallery/';
