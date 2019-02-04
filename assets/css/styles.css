@@ -252,6 +252,17 @@ body {
     font-size: 100%;
 }
 
+/* for Safari browser issue */
+ul {
+    font-size: 0;
+}
+
+
+
+#st-2 {
+    display: none !important;
+}
+
 .title {
     display: inline-block;
 }
@@ -1759,12 +1770,6 @@ blockquote {
     vertical-align: baseline;
 }
 
-
-.thumb {
-    margin-bottom: 10px;
-    margin-right: -10px;
-}
-
 .stuff-text {
     font-size: 15px;
 }
@@ -2013,10 +2018,6 @@ textarea:-moz-placeholder {
 
 #cssmenu ul ul li.active>a {
     color: #9ecc3b;
-}
-
-ul li {
-    font-size: 18px;
 }
 
 #myNav ul li {
@@ -2400,12 +2401,6 @@ input.red-btn:hover {
     margin-left: -15px;
 }
 
-.thumb {
-    margin-bottom: 20px;
-    margin-right: 15px;
-    margin-left: -15px;
-}
-
 .contacts-page span[itemprop] {
     font-size: 18px;
 }
@@ -2742,16 +2737,8 @@ span.tag {
         font-size: 40px;
     }
 
-    .main {
-        background-size: 1600px 1100px;
-    }
-
     .stuff-text {
         font-size: 12px;
-    }
-
-    ul li {
-        font-size: 14px;
     }
 
     .nav ul {
@@ -2857,6 +2844,17 @@ span.tag {
 }
 
 @media only screen and (min-width: 1025px) {
+    .assets-block{
+        min-width: 1016px;
+        width: 80%;
+    }
+    
+    .centered-vertical {
+        position: fixed;
+        top: 50% !important;
+        transform: translate(0%, -50%);
+    }
+
     .front-title {
         font-size: 3rem;
     }

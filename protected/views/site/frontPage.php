@@ -1,7 +1,7 @@
 <div class="main">
      <div class="projects-container project-3-col">
         <ul class="m-0 p-0 h-100 row custom-display-flex">
-            <li class="cd-single-project green is-loaded custom-grow col p-0 w-100">
+            <li class="cd-single-project green is-loaded custom-grow col m-0 p-0 w-100" onclick="">
               <div class="image-about h-100"></div>
               <div class="cd-title text-white">
                 <span class="front-title"><?php echo $company->getTranslation($this->Lang)->name;?></span>
@@ -20,7 +20,7 @@
             </li>
 
 
-            <li class="cd-single-project blue is-loaded custom-grow col p-0 w-100">
+            <li class="cd-single-project blue is-loaded custom-grow col m-0 p-0 w-100" onclick="">
               <div class="image-services h-100"></div>
               <div class="cd-title text-white">
                 <span class="front-title"><?php echo $services->getTranslation($this->Lang)->name;?></span>
@@ -39,7 +39,7 @@
             </li>
 
 
-            <li class="cd-single-project orange is-loaded custom-grow col p-0 w-100 ">
+            <li class="cd-single-project orange is-loaded custom-grow col m-0 p-0 w-100 " onclick="">
               <div class="image-works h-100"></div>
               <div class="cd-title text-white">
                 <span class="front-title"><?php echo $works->getTranslation($this->Lang)->name;?></span>

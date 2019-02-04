@@ -70,8 +70,6 @@
                     <div class='clearfix'></div>
                     <div class="socnet-tools">
                         <hr>
-                          <!-- Go to www.addthis.com/dashboard to customize your tools -->
-                          <div class="addthis_inline_share_toolbox"></div>
 
 <!-- 
                           <div class="addthis_toolbox addthis_default_style addthis_32x32_style"> 

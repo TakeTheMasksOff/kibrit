@@ -21,6 +21,9 @@
         <meta property="og:description" <?php if (!empty($this->pageDescription)){echo 'content="' . $this->pageDescription . '"';}?>/> 
         <meta property="og:url" content="<?=Yii::app()->request->hostInfo.Yii::app()->request->url?>" /> 
         <meta property="og:image" content="http://kibrit.tech/assets/images/about.jpg" />
+        <!--  ShareThis BEGIN -->
+        <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5c5059da058f100011a5b26d&product=sticky-share-buttons' async='async'></script>
+        <!--  ShareThis END -->
         <meta name="google-site-verification" content="d3lYmjqI7ptbWGYQF2MS6ibRQlMnibLLv76fz9Jk25w" /> <!-- for Google Search Console. Verification-->
 
         <!-- Google Tag Manager -->
@@ -80,10 +83,5 @@
                 "logo": "http://kibrit.tech/assets/images/kibrit_logo.png"  
             } 
         </script>
-
-        <!-- Go to www.addthis.com/dashboard to customize your tools -->
-        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5810568ed539c014"></script>
-
-
     </body>
 </html>
