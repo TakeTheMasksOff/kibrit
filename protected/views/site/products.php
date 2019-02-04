@@ -4,19 +4,18 @@
         (string) $model->getTranslation($this->Lang)->name,
     );
 ?>
-
+<div class="sharethis-sticky-share-buttons centered-vertical" ></div>
 <div class='main <?php if (Yii::app()->controller->id=='site' && Yii::app()->controller->action->id=='philosophy'):?>philosophy<?php endif;?>' >
 
-    <div class="container-fluid">
+    <div class="container-fluid assets-block">
       <div class="row title-block">
-          <div class="col-md-2 col-lg-2"></div>
-          <div class="col-md-8 col-lg-8">
-              <div class="title">
+          <div class="col-12">
+              <div class="title ">
                     <span><?php echo Utilities::uppercase($model->getTranslation($this->Lang)->name);?></span>
                     <hr class="orange" />
               </div>
               <div class="pull-right">
-                <div id="breadCrumb">
+                <div id="breadCrumb" >
                     <?php if(isset($this->breadcrumbs)):?>
                         <?php $this->widget('zii.widgets.CBreadcrumbs', array(
                             'links'=>$this->breadcrumbs,
@@ -24,66 +23,60 @@
                             'htmlOptions' =>array(), // no attributes on container
                             'separator'=>' <li><svg class="icon-angle-right"><use xlink:href="#icon-angle-right"></use></svg> </li>',
                             'homeLink'    =>'<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                                             <a itemprop="item" href="/"><span itemprop="name">Kibrit</span></a>
+                                             <a class="text-white" itemprop="item" href="/"><span itemprop="name">Kibrit</span></a>
                                              <meta itemprop="position" content="1" /></li>', // home link template
                             'activeLinkTemplate'  =>'<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                                                     <a itemprop="item" href="{url}"><span itemprop="name">{label}</span></a></li>', //active link template
-                            'inactiveLinkTemplate'  =>'<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="selected"><a itemprop="item" > <span itemprop="name">{label}</span></a></li>', // in-active link template
+                                                     <a class="text-white" itemprop="item" href="{url}"><span itemprop="name">{label}</span></a></li>', //active link template
+                            'inactiveLinkTemplate'  =>'<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="selected"><a class="text-white" itemprop="item" > <span itemprop="name">{label}</span></a></li>', // in-active link template
                         )); ?>
                     <?php endif;?>
                 </div>
               </div>
           </div>
-          <div class="col-md-2 col-lg-2"></div>
       </div>
 
-      <div class='row'>
-          <div class="col-md-2 col-lg-2"></div>
-  
-          <div class="col-md-2 col-lg-2">
-              <p><?php echo $model->getContentTranslation($this->Lang)->body;?></p>
+      <div class='row mt-4'>
+          <div class="col-md-4">
+              <p class="mr-5"><?php echo $model->getContentTranslation($this->Lang)->body;?></p>
           </div>
-          <div class="col-md-6 col-lg-6 b-padding" id="outer">
-          <br>
-          <div class="row bbq-link">
+          <div class="col-md-8 " id="outer">
+            <div class="row justify-content-end bbq-link mb-5">
 
-          <?php if (count($sidebar)):?>
-              <?php $i=1;foreach($sidebar as $menu):?>
-                    <div class="col-xs-6 thumb bbq-nav bbq-nav-top <?php echo $i%2?'':'third';?>">
-                        <?php echo CHtml::ajaxLink( ' <img src="'.$menu->getCoverPhoto()->getPath().'" class="img-responsive" alt="'.trim($menu->getTranslation($this->Lang)->name)." ".Utilities::t("developedBy").'" title="'.$menu->getTranslation($this->Lang)->name.'">', 
-                          array($this->Lang.'/products'),
-                          array(
-                              'type' => 'GET',
-                              'data'=>array('keyword'=> $menu->getTranslation($this->Lang)->getLink($this->Lang,$menu->id)),
-                              'success' => "
-                                 function(html){
-                                 $('#content-block').html(html);
-                                 history.pushState(null,null,'".Yii::app()->createUrl($this->Lang."/products#!".$menu->getTranslation($this->Lang)->getLink($this->Lang,$menu->id))."');
+            <?php if (count($sidebar)):?>
+                <?php $i=1;foreach($sidebar as $menu):?>
+                      <div class="col-12 col-md-6 thumb bbq-nav bbq-nav-top <?php echo $i%2?'':'third';?>">
+                          <?php echo CHtml::ajaxLink( ' <img src="'.$menu->getCoverPhoto()->getPath().'" class="img-responsive w-100" alt="'.trim($menu->getTranslation($this->Lang)->name)." ".Utilities::t("developedBy").'" title="'.$menu->getTranslation($this->Lang)->name.'">', 
+                            array($this->Lang.'/products'),
+                            array(
+                                'type' => 'GET',
+                                'data'=>array('keyword'=> $menu->getTranslation($this->Lang)->getLink($this->Lang,$menu->id)),
+                                'success' => "
+                                  function(html){
+                                  $('#content-block').html(html);
+                                  history.pushState(null,null,'".Yii::app()->createUrl($this->Lang."/products#!".$menu->getTranslation($this->Lang)->getLink($this->Lang,$menu->id))."');
 
-                                 changeMetaTags( window.location.href,
-                                  '".ucwords($menu->getContentTranslation($this->Lang)->name)." - ".Utilities::t("softwareDevelopedBy")."',
-                                  '".$menu->getContentTranslation($this->Lang)->description."'
-                                 );
-                               }",
-                            ),
-                          array(
-                            'class'=>'showRightBlock '.$menu->getTranslation($this->Lang)->getLink($this->Lang,$menu->id),
-                            'href' => Yii::app()->createUrl($this->Lang."/products#!".$menu->getTranslation($this->Lang)->getLink($this->Lang,$menu->id))
-                            )
-                          );?>
+                                  changeMetaTags( window.location.href,
+                                    '".ucwords($menu->getContentTranslation($this->Lang)->name)." - ".Utilities::t("softwareDevelopedBy")."',
+                                    '".$menu->getContentTranslation($this->Lang)->description."'
+                                  );
+                                }",
+                              ),
+                            array(
+                              'class'=>'showRightBlock ',
+                              'href' => Yii::app()->createUrl($this->Lang."/products#!".$menu->getTranslation($this->Lang)->getLink($this->Lang,$menu->id))
+                              )
+                            );?>
 
-                        <p><?php echo Utilities::uppercase($menu->getTranslation($this->Lang)->name) ?></p>
-                    </div>
-                    <?php if (!($i%2)):?>
-                        <div class="clearfix"></div>
-                    <?php endif;?>
-              <?php $i++;endforeach;?>
-          <?php endif;?>
-                      <!-- Go to www.addthis.com/dashboard to customize your tools -->
-                      <div class="addthis_inline_share_toolbox"></div>
+                          <p class="mt-2 mb-4"><?php echo Utilities::uppercase($menu->getTranslation($this->Lang)->name) ?></p>
+                      </div>
+                      <?php if (!($i%2)):?>
+                          <div class="clearfix"></div>
+                      <?php endif;?>
+                <?php $i++;endforeach;?>
+            <?php endif;?>
+                          
+            </div>
           </div>
-          </div>
-          <div class="col-md-2 col-lg-2"></div>  
       </div>
     </div>
 

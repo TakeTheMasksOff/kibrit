@@ -79,8 +79,6 @@
         <div class="col-xs-8 col-md-6 col-lg-6 b-padding" id="outer">
         <div class="row">
                 <?php echo $model->getContentTranslation($this->Lang)->body;?>  
-                <!-- Go to www.addthis.com/dashboard to customize your tools -->
-                <div class="addthis_inline_share_toolbox"></div>
         </div>
     </div>
     <div class="col-md-2 col-lg-2"></div>    

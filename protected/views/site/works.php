@@ -109,8 +109,6 @@
                         <?php endif;?>
               <?php $i++;endforeach;?>
           <?php endif;?>
-          <!-- Go to www.addthis.com/dashboard to customize your tools -->
-          <div class="addthis_inline_share_toolbox"></div>
           </div>
           </div>
           <div class="col-md-2 col-lg-2"></div>  

@@ -44,8 +44,6 @@
           <div class="col-md-2 col-lg-2"></div>
           <div class="col-md-6 col-lg-6" id="outer" style="padding-bottom:80px">
               <?php echo $model->getContentTranslation($this->Lang)->body;?>    
-              <!-- Go to www.addthis.com/dashboard to customize your tools -->
-              <div class="addthis_inline_share_toolbox"></div>
           </div>
           <div class="col-md-2 col-lg-2 bottom-padding">
               <?php echo ($model->getContentTranslation($this->Lang)->summary!='')?$model->getContentTranslation($this->Lang)->summary : '';?>

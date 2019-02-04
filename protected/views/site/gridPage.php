@@ -101,8 +101,6 @@
                       <div class="clearfix"></div>
                 </div>  
                 <?php endif;?> 
-                <!-- Go to www.addthis.com/dashboard to customize your tools -->
-                <div class="addthis_inline_share_toolbox"></div>
           </div>
           <div class="col-md-2 col-lg-2 b-padding" >
               <?php echo ($model->getContentTranslation($this->Lang)->summary!='')?$model->getContentTranslation($this->Lang)->summary : '';?>
