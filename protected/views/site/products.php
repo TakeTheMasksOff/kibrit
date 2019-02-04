@@ -8,8 +8,8 @@
 <div class='main <?php if (Yii::app()->controller->id=='site' && Yii::app()->controller->action->id=='philosophy'):?>philosophy<?php endif;?>' >
 
     <div class="container-fluid assets-block">
-      <div class="row title-block">
-          <div class="col-12">
+      <div class="row justify-content-center title-block">
+          <div class="col-md-9 col-lg-12">
               <div class="title ">
                     <span><?php echo Utilities::uppercase($model->getTranslation($this->Lang)->name);?></span>
                     <hr class="orange" />
@@ -35,16 +35,16 @@
           </div>
       </div>
 
-      <div class='row mt-4'>
-          <div class="col-md-4">
-              <p class="mr-5"><?php echo $model->getContentTranslation($this->Lang)->body;?></p>
+      <div class='row mt-4 justify-content-center'>
+          <div class="col-md-3 col-lg-4">
+              <p class="mr-lg-5"><?php echo $model->getContentTranslation($this->Lang)->body;?></p>
           </div>
-          <div class="col-md-8 " id="outer">
+          <div class="col-md-6 col-lg-8" id="outer">
             <div class="row justify-content-end bbq-link mb-5">
 
             <?php if (count($sidebar)):?>
                 <?php $i=1;foreach($sidebar as $menu):?>
-                      <div class="col-12 col-md-6 thumb bbq-nav bbq-nav-top <?php echo $i%2?'':'third';?>">
+                      <div class="col-12 col-md-9 col-lg-6 thumb bbq-nav bbq-nav-top <?php echo $i%2?'':'third';?>">
                           <?php echo CHtml::ajaxLink( ' <img src="'.$menu->getCoverPhoto()->getPath().'" class="img-responsive w-100" alt="'.trim($menu->getTranslation($this->Lang)->name)." ".Utilities::t("developedBy").'" title="'.$menu->getTranslation($this->Lang)->name.'">', 
                             array($this->Lang.'/products'),
                             array(

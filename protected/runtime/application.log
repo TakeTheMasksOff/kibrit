@@ -29004,3 +29004,336 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/assets/css/bootstrap.css.map
 ---
+2019/02/04 11:32:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/css/arrow.png".' in C:\OSPanel\domains\kibrit\yoo\framework\web\CUrlManager.php:374
+Stack trace:
+#0 C:\OSPanel\domains\kibrit\yoo\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#1 C:\OSPanel\domains\kibrit\yoo\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\OSPanel\domains\kibrit\index.php(147): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/css/arrow.png
+HTTP_REFERER=http://kibrit.new/assets/css/styles.css
+---
+2019/02/04 11:33:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/css/arrow.png".' in C:\OSPanel\domains\kibrit\yoo\framework\web\CUrlManager.php:374
+Stack trace:
+#0 C:\OSPanel\domains\kibrit\yoo\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#1 C:\OSPanel\domains\kibrit\yoo\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\OSPanel\domains\kibrit\index.php(147): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/css/arrow.png
+HTTP_REFERER=http://kibrit.new/assets/css/styles.css
+---
+2019/02/04 11:33:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/css/arrow.png".' in C:\OSPanel\domains\kibrit\yoo\framework\web\CUrlManager.php:374
+Stack trace:
+#0 C:\OSPanel\domains\kibrit\yoo\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#1 C:\OSPanel\domains\kibrit\yoo\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\OSPanel\domains\kibrit\index.php(147): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/css/arrow.png
+HTTP_REFERER=http://kibrit.new/assets/css/styles.css
+---
+2019/02/04 11:39:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/css/arrow.png".' in C:\OSPanel\domains\kibrit\yoo\framework\web\CUrlManager.php:374
+Stack trace:
+#0 C:\OSPanel\domains\kibrit\yoo\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#1 C:\OSPanel\domains\kibrit\yoo\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\OSPanel\domains\kibrit\index.php(147): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/css/arrow.png
+HTTP_REFERER=http://10.100.3.71/assets/css/styles.css
+---
+2019/02/04 11:43:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/css/arrow.png".' in C:\OSPanel\domains\kibrit\yoo\framework\web\CUrlManager.php:374
+Stack trace:
+#0 C:\OSPanel\domains\kibrit\yoo\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#1 C:\OSPanel\domains\kibrit\yoo\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\OSPanel\domains\kibrit\index.php(147): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/css/arrow.png
+HTTP_REFERER=http://10.100.3.71/assets/css/styles.css
+---
+2019/02/04 11:50:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/javascripts/popper.js.map".' in C:\OSPanel\domains\kibrit\yoo\framework\web\CUrlManager.php:374
+Stack trace:
+#0 C:\OSPanel\domains\kibrit\yoo\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#1 C:\OSPanel\domains\kibrit\yoo\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\OSPanel\domains\kibrit\index.php(147): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/javascripts/popper.js.map
+---
+2019/02/04 11:50:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/javascripts/bootstrap.min.js.map".' in C:\OSPanel\domains\kibrit\yoo\framework\web\CUrlManager.php:374
+Stack trace:
+#0 C:\OSPanel\domains\kibrit\yoo\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#1 C:\OSPanel\domains\kibrit\yoo\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\OSPanel\domains\kibrit\index.php(147): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/javascripts/bootstrap.min.js.map
+---
+2019/02/04 11:50:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/css/bootstrap.css.map".' in C:\OSPanel\domains\kibrit\yoo\framework\web\CUrlManager.php:374
+Stack trace:
+#0 C:\OSPanel\domains\kibrit\yoo\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#1 C:\OSPanel\domains\kibrit\yoo\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\OSPanel\domains\kibrit\index.php(147): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/css/bootstrap.css.map
+---
+2019/02/04 11:57:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/css/bootstrap.css.map".' in C:\OSPanel\domains\kibrit\yoo\framework\web\CUrlManager.php:374
+Stack trace:
+#0 C:\OSPanel\domains\kibrit\yoo\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#1 C:\OSPanel\domains\kibrit\yoo\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\OSPanel\domains\kibrit\index.php(147): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/css/bootstrap.css.map
+---
+2019/02/04 11:57:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/javascripts/popper.js.map".' in C:\OSPanel\domains\kibrit\yoo\framework\web\CUrlManager.php:374
+Stack trace:
+#0 C:\OSPanel\domains\kibrit\yoo\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#1 C:\OSPanel\domains\kibrit\yoo\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\OSPanel\domains\kibrit\index.php(147): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/javascripts/popper.js.map
+---
+2019/02/04 11:57:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/javascripts/bootstrap.min.js.map".' in C:\OSPanel\domains\kibrit\yoo\framework\web\CUrlManager.php:374
+Stack trace:
+#0 C:\OSPanel\domains\kibrit\yoo\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#1 C:\OSPanel\domains\kibrit\yoo\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\OSPanel\domains\kibrit\index.php(147): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/javascripts/bootstrap.min.js.map
+---
+2019/02/04 11:57:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/css/arrow.png".' in C:\OSPanel\domains\kibrit\yoo\framework\web\CUrlManager.php:374
+Stack trace:
+#0 C:\OSPanel\domains\kibrit\yoo\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#1 C:\OSPanel\domains\kibrit\yoo\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\OSPanel\domains\kibrit\index.php(147): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/css/arrow.png
+HTTP_REFERER=http://10.100.3.71/assets/css/styles.css
+---
+2019/02/04 12:02:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/css/bootstrap.css.map".' in C:\OSPanel\domains\kibrit\yoo\framework\web\CUrlManager.php:374
+Stack trace:
+#0 C:\OSPanel\domains\kibrit\yoo\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#1 C:\OSPanel\domains\kibrit\yoo\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\OSPanel\domains\kibrit\index.php(147): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/css/bootstrap.css.map
+---
+2019/02/04 12:02:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/javascripts/bootstrap.min.js.map".' in C:\OSPanel\domains\kibrit\yoo\framework\web\CUrlManager.php:374
+Stack trace:
+#0 C:\OSPanel\domains\kibrit\yoo\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#1 C:\OSPanel\domains\kibrit\yoo\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\OSPanel\domains\kibrit\index.php(147): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/javascripts/bootstrap.min.js.map
+---
+2019/02/04 12:02:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/css/arrow.png".' in C:\OSPanel\domains\kibrit\yoo\framework\web\CUrlManager.php:374
+Stack trace:
+#0 C:\OSPanel\domains\kibrit\yoo\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#1 C:\OSPanel\domains\kibrit\yoo\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\OSPanel\domains\kibrit\index.php(147): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/css/arrow.png
+HTTP_REFERER=http://10.100.3.71/assets/css/styles.css
+---
+2019/02/04 12:02:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/javascripts/popper.js.map".' in C:\OSPanel\domains\kibrit\yoo\framework\web\CUrlManager.php:374
+Stack trace:
+#0 C:\OSPanel\domains\kibrit\yoo\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#1 C:\OSPanel\domains\kibrit\yoo\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\OSPanel\domains\kibrit\index.php(147): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/javascripts/popper.js.map
+---
+2019/02/04 12:02:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/javascripts/popper.js.map".' in C:\OSPanel\domains\kibrit\yoo\framework\web\CUrlManager.php:374
+Stack trace:
+#0 C:\OSPanel\domains\kibrit\yoo\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#1 C:\OSPanel\domains\kibrit\yoo\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\OSPanel\domains\kibrit\index.php(147): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/javascripts/popper.js.map
+---
+2019/02/04 12:02:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/javascripts/bootstrap.min.js.map".' in C:\OSPanel\domains\kibrit\yoo\framework\web\CUrlManager.php:374
+Stack trace:
+#0 C:\OSPanel\domains\kibrit\yoo\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#1 C:\OSPanel\domains\kibrit\yoo\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\OSPanel\domains\kibrit\index.php(147): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/javascripts/bootstrap.min.js.map
+---
+2019/02/04 12:02:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/css/bootstrap.css.map".' in C:\OSPanel\domains\kibrit\yoo\framework\web\CUrlManager.php:374
+Stack trace:
+#0 C:\OSPanel\domains\kibrit\yoo\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#1 C:\OSPanel\domains\kibrit\yoo\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\OSPanel\domains\kibrit\index.php(147): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/css/bootstrap.css.map
+---
+2019/02/04 12:02:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/css/arrow.png".' in C:\OSPanel\domains\kibrit\yoo\framework\web\CUrlManager.php:374
+Stack trace:
+#0 C:\OSPanel\domains\kibrit\yoo\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#1 C:\OSPanel\domains\kibrit\yoo\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\OSPanel\domains\kibrit\index.php(147): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/css/arrow.png
+HTTP_REFERER=http://10.100.3.71/assets/css/styles.css
+---
+2019/02/04 12:04:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/css/bootstrap.css.map".' in C:\OSPanel\domains\kibrit\yoo\framework\web\CUrlManager.php:374
+Stack trace:
+#0 C:\OSPanel\domains\kibrit\yoo\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#1 C:\OSPanel\domains\kibrit\yoo\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\OSPanel\domains\kibrit\index.php(147): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/css/bootstrap.css.map
+---
+2019/02/04 12:04:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/css/arrow.png".' in C:\OSPanel\domains\kibrit\yoo\framework\web\CUrlManager.php:374
+Stack trace:
+#0 C:\OSPanel\domains\kibrit\yoo\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#1 C:\OSPanel\domains\kibrit\yoo\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\OSPanel\domains\kibrit\index.php(147): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/css/arrow.png
+HTTP_REFERER=http://10.100.3.71/assets/css/styles.css
+---
+2019/02/04 12:04:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/javascripts/bootstrap.min.js.map".' in C:\OSPanel\domains\kibrit\yoo\framework\web\CUrlManager.php:374
+Stack trace:
+#0 C:\OSPanel\domains\kibrit\yoo\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#1 C:\OSPanel\domains\kibrit\yoo\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\OSPanel\domains\kibrit\index.php(147): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/javascripts/bootstrap.min.js.map
+---
+2019/02/04 12:04:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/javascripts/popper.js.map".' in C:\OSPanel\domains\kibrit\yoo\framework\web\CUrlManager.php:374
+Stack trace:
+#0 C:\OSPanel\domains\kibrit\yoo\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#1 C:\OSPanel\domains\kibrit\yoo\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\OSPanel\domains\kibrit\index.php(147): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/javascripts/popper.js.map
+---
+2019/02/04 12:05:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/javascripts/popper.js.map".' in C:\OSPanel\domains\kibrit\yoo\framework\web\CUrlManager.php:374
+Stack trace:
+#0 C:\OSPanel\domains\kibrit\yoo\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#1 C:\OSPanel\domains\kibrit\yoo\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\OSPanel\domains\kibrit\index.php(147): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/javascripts/popper.js.map
+---
+2019/02/04 12:05:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/javascripts/bootstrap.min.js.map".' in C:\OSPanel\domains\kibrit\yoo\framework\web\CUrlManager.php:374
+Stack trace:
+#0 C:\OSPanel\domains\kibrit\yoo\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#1 C:\OSPanel\domains\kibrit\yoo\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\OSPanel\domains\kibrit\index.php(147): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/javascripts/bootstrap.min.js.map
+---
+2019/02/04 12:05:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/css/bootstrap.css.map".' in C:\OSPanel\domains\kibrit\yoo\framework\web\CUrlManager.php:374
+Stack trace:
+#0 C:\OSPanel\domains\kibrit\yoo\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#1 C:\OSPanel\domains\kibrit\yoo\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\OSPanel\domains\kibrit\index.php(147): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/css/bootstrap.css.map
+---
+2019/02/04 12:05:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/css/arrow.png".' in C:\OSPanel\domains\kibrit\yoo\framework\web\CUrlManager.php:374
+Stack trace:
+#0 C:\OSPanel\domains\kibrit\yoo\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#1 C:\OSPanel\domains\kibrit\yoo\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\OSPanel\domains\kibrit\index.php(147): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/css/arrow.png
+HTTP_REFERER=http://10.100.3.71/assets/css/styles.css
+---
+2019/02/04 12:05:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/css/bootstrap.css.map".' in C:\OSPanel\domains\kibrit\yoo\framework\web\CUrlManager.php:374
+Stack trace:
+#0 C:\OSPanel\domains\kibrit\yoo\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#1 C:\OSPanel\domains\kibrit\yoo\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\OSPanel\domains\kibrit\index.php(147): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/css/bootstrap.css.map
+---
+2019/02/04 12:05:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/css/arrow.png".' in C:\OSPanel\domains\kibrit\yoo\framework\web\CUrlManager.php:374
+Stack trace:
+#0 C:\OSPanel\domains\kibrit\yoo\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#1 C:\OSPanel\domains\kibrit\yoo\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\OSPanel\domains\kibrit\index.php(147): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/css/arrow.png
+HTTP_REFERER=http://10.100.3.71/assets/css/styles.css
+---
+2019/02/04 12:05:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/javascripts/popper.js.map".' in C:\OSPanel\domains\kibrit\yoo\framework\web\CUrlManager.php:374
+Stack trace:
+#0 C:\OSPanel\domains\kibrit\yoo\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#1 C:\OSPanel\domains\kibrit\yoo\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\OSPanel\domains\kibrit\index.php(147): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/javascripts/popper.js.map
+---
+2019/02/04 12:05:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/javascripts/bootstrap.min.js.map".' in C:\OSPanel\domains\kibrit\yoo\framework\web\CUrlManager.php:374
+Stack trace:
+#0 C:\OSPanel\domains\kibrit\yoo\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#1 C:\OSPanel\domains\kibrit\yoo\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\OSPanel\domains\kibrit\index.php(147): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/javascripts/bootstrap.min.js.map
+---
+2019/02/04 12:06:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/css/bootstrap.css.map".' in C:\OSPanel\domains\kibrit\yoo\framework\web\CUrlManager.php:374
+Stack trace:
+#0 C:\OSPanel\domains\kibrit\yoo\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#1 C:\OSPanel\domains\kibrit\yoo\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\OSPanel\domains\kibrit\index.php(147): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/css/bootstrap.css.map
+---
+2019/02/04 12:06:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/css/arrow.png".' in C:\OSPanel\domains\kibrit\yoo\framework\web\CUrlManager.php:374
+Stack trace:
+#0 C:\OSPanel\domains\kibrit\yoo\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#1 C:\OSPanel\domains\kibrit\yoo\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\OSPanel\domains\kibrit\index.php(147): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/css/arrow.png
+HTTP_REFERER=http://10.100.3.71/assets/css/styles.css
+---
+2019/02/04 12:06:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/javascripts/popper.js.map".' in C:\OSPanel\domains\kibrit\yoo\framework\web\CUrlManager.php:374
+Stack trace:
+#0 C:\OSPanel\domains\kibrit\yoo\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#1 C:\OSPanel\domains\kibrit\yoo\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\OSPanel\domains\kibrit\index.php(147): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/javascripts/popper.js.map
+---
+2019/02/04 12:06:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/javascripts/bootstrap.min.js.map".' in C:\OSPanel\domains\kibrit\yoo\framework\web\CUrlManager.php:374
+Stack trace:
+#0 C:\OSPanel\domains\kibrit\yoo\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#1 C:\OSPanel\domains\kibrit\yoo\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\OSPanel\domains\kibrit\index.php(147): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/javascripts/bootstrap.min.js.map
+---
+2019/02/04 12:06:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/css/bootstrap.css.map".' in C:\OSPanel\domains\kibrit\yoo\framework\web\CUrlManager.php:374
+Stack trace:
+#0 C:\OSPanel\domains\kibrit\yoo\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#1 C:\OSPanel\domains\kibrit\yoo\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\OSPanel\domains\kibrit\index.php(147): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/css/bootstrap.css.map
+---
+2019/02/04 12:06:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/css/arrow.png".' in C:\OSPanel\domains\kibrit\yoo\framework\web\CUrlManager.php:374
+Stack trace:
+#0 C:\OSPanel\domains\kibrit\yoo\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#1 C:\OSPanel\domains\kibrit\yoo\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\OSPanel\domains\kibrit\index.php(147): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/css/arrow.png
+HTTP_REFERER=http://10.100.3.71/assets/css/styles.css
+---
+2019/02/04 12:06:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/javascripts/popper.js.map".' in C:\OSPanel\domains\kibrit\yoo\framework\web\CUrlManager.php:374
+Stack trace:
+#0 C:\OSPanel\domains\kibrit\yoo\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#1 C:\OSPanel\domains\kibrit\yoo\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\OSPanel\domains\kibrit\index.php(147): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/javascripts/popper.js.map
+---
+2019/02/04 12:06:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/javascripts/bootstrap.min.js.map".' in C:\OSPanel\domains\kibrit\yoo\framework\web\CUrlManager.php:374
+Stack trace:
+#0 C:\OSPanel\domains\kibrit\yoo\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#1 C:\OSPanel\domains\kibrit\yoo\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\OSPanel\domains\kibrit\index.php(147): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/javascripts/bootstrap.min.js.map
+---
