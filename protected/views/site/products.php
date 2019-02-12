@@ -4,11 +4,11 @@
         (string) $model->getTranslation($this->Lang)->name,
     );
 ?>
-<div class="sharethis-sticky-share-buttons centered-vertical" ></div>
+<!-- <div class="sharethis-sticky-share-buttons centered-vertical" ></div> -->
 <div class='main <?php if (Yii::app()->controller->id=='site' && Yii::app()->controller->action->id=='philosophy'):?>philosophy<?php endif;?>' >
 
     <div class="container-fluid assets-block">
-      <div class="row justify-content-center title-block">
+      <div class="row justify-content-center title-block mx-md-3">
           <div class="col-md-9 col-lg-12">
               <div class="title ">
                     <span><?php echo Utilities::uppercase($model->getTranslation($this->Lang)->name);?></span>
@@ -35,7 +35,7 @@
           </div>
       </div>
 
-      <div class='row mt-4 justify-content-center'>
+      <div class='row mt-4 justify-content-center mx-md-3'>
           <div class="col-md-3 col-lg-4">
               <p class="mr-lg-5"><?php echo $model->getContentTranslation($this->Lang)->body;?></p>
           </div>

@@ -300,19 +300,9 @@ ul {
     visibility: hidden;
 }
 
-.green {
-    color: #9ecc3b;
-    background-color: #9ecc3b;
-}
-
 .orange {
     color: #FF9A00;
     background-color: #FF9A00;
-}
-
-.red {
-    color: #E44850;
-    background-color: #E44850;
 }
 
 .blue {
