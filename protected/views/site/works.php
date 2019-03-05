@@ -10,17 +10,17 @@
         <div class="row justify-content-center title-block mx-md-3">
             <div class="col-md-9 col-lg-12">
                 <div class="title">
-                    <span><?php echo Utilities::uppercase($model->getTranslation($this->Lang)->name);?></span>
+                    <h1><?php echo Utilities::uppercase($model->getTranslation($this->Lang)->name);?></h1>
                     <hr class="orange" />
                 </div>
-                <div class="pull-right">
+                <div class="pull-right d-none d-md-block">
                     <div id="breadCrumb">
                         <?php if(isset($this->breadcrumbs)):?>
                         <?php $this->widget('zii.widgets.CBreadcrumbs', array(
                             'links'=>$this->breadcrumbs,
                             'tagName'   =>'ol itemscope itemtype="http://schema.org/BreadcrumbList"', // container tag
                             'htmlOptions' =>array(), // no attributes on container
-                            'separator'=>' <li><svg class="icon-angle-right"><use xlink:href="#icon-angle-right"></use></svg> </li>',
+                            'separator'=>' <li><span class="delimeter"></span></li>',
                             'homeLink'    =>'<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
                                              <a class="text-white" itemprop="item" href="/"><span itemprop="name">Kibrit</span></a>
                                              <meta itemprop="position" content="1" /></li>', // home link template

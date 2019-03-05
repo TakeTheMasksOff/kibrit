@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /assets/javascripts/
 Host: http://kibrit.tech
-Sitemap: http://kibrit.tech/sitemap4.xml
+Sitemap: http://kibrit.tech/sitemap.xml
