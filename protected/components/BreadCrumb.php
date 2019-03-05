@@ -3,7 +3,7 @@ class BreadCrumb extends CWidget {
 
     public $crumbs = array();
     public $newCrumb = array();
-    public $delimiter = ' <svg class="icon-angle-right"><use xlink:href="#icon-angle-right"></use></svg> ';
+    public $delimiter = ' <span class="delimeter"></span> ';
     public $hideCrumbsOnHome = true;
     public $firstCrumbName = false;
     public $firstCrumb = array('Home' => array('name' => 'Home', 'url' => array()));

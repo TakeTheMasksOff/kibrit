@@ -138,10 +138,10 @@ die("Redirect");
 // }
 
 
-    // Подключаем конфигурационный файл
-    $config=dirname(__FILE__).'/protected/config/main.php';
-    // Подключаем фреймворк Yii
-    $yii=dirname(__FILE__).'/yoo/framework/yii.php';
-    require_once($yii);
-    // Создаем экземпляр объекта веб-приложения и запускаем его
-    Yii::createWebApplication($config)->run();
+// Подключаем конфигурационный файл
+$config=dirname(__FILE__).'/protected/config/main.php';
+// Подключаем фреймворк Yii
+$yii=dirname(__FILE__).'/yoo/framework/yii.php';
+require_once($yii);
+// Создаем экземпляр объекта веб-приложения и запускаем его
+Yii::createWebApplication($config)->run();

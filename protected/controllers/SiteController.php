@@ -344,22 +344,24 @@ foreach($langs as $lang)
             $content = $this->active = Menus::model()->findByAttributes(array('keyword'=>$keyword))->getContentTranslation($this->Lang)->body;
 
             $this->renderPartial('_products', array('blockContent'=>$content, 'title'=>$title, 'keyword' => $keyword), false, false);
+
+
             Yii::app()->end();
-             return true;
+            // return true;
         } else if ($keyword){
             Yii::app()->clientScript->registerScript('ajax_reflesh', '
                 $(".showRightBlock").on("click", function(){
                     openRightBlock();
                 });
-                $(".showRightBlock.'.$keyword.'").click();
-                ', CClientScript::POS_LOAD);
+                $(".showRightBlock.'.$keyword.'").click();', CClientScript::POS_LOAD);
             //return false;
         } else {
             Yii::app()->clientScript->registerScript('ajax_with_fragment', '
+
                 if (window.location.hash) {
                     $(".showRightBlock").on("click", function(){
                     openRightBlock();
-                });
+                    });
                 $(".showRightBlock."+window.location.hash.replace( /#!/, "" ).replace(/\/$/, "").split("?")[0] ).click();
                 }
             ', CClientScript::POS_LOAD);

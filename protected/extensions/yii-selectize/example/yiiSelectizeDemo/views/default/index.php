@@ -13,8 +13,8 @@ $this->breadcrumbs = array(
 <?php echo CHtml::beginForm(); ?>
 
 
-    <h2>single selection</h2>
-    <?php
+<h2>single selection</h2>
+<?php
     $this->widget('ext.yii-selectize.YiiSelectize', array(
             'name'      => 'test2',
             'value'     => 'world', // the selected item
@@ -27,10 +27,10 @@ $this->breadcrumbs = array(
     );
     ?>
 
-    <hr>
+<hr>
 
-    <h2>multiple selection</h2>
-    <?php
+<h2>multiple selection</h2>
+<?php
     $this->widget('ext.yii-selectize.YiiSelectize', array(
             'name'           => 'test4',
             'data'           => array(
@@ -47,13 +47,13 @@ $this->breadcrumbs = array(
     );
     ?>
 
-    <hr>
+<hr>
 
-    <h2>using events callbacks</h2>
+<h2>using events callbacks</h2>
 
-    <p>(see your browser's console)</p>
+<p>(see your browser's console)</p>
 
-    <?php
+<?php
     $this->widget('ext.yii-selectize.YiiSelectize', array(
             'name'      => 'test5',
             'value'     => 'world',
@@ -70,12 +70,12 @@ $this->breadcrumbs = array(
     );
     ?>
 
-    <hr>
+<hr>
 
-    <h2>required</h2>
+<h2>required</h2>
 
-    <div class="row">
-        <?php
+<div class="row">
+    <?php
         $this->widget('ext.yii-selectize.YiiSelectize', array(
                 'name'      => 'test6',
                 'data'      => array(
@@ -89,21 +89,21 @@ $this->breadcrumbs = array(
             )
         );
         ?>
-    </div>
+</div>
 
-    <div class="row buttons">
-        <input type="submit">
-    </div>
+<div class="row buttons">
+    <input type="submit">
+</div>
 
 <?php echo CHtml::endForm(); ?>
 
 <script>
-    function myOnChangeTest(value) {
-        console.log(value);
-    }
+function myOnChangeTest(value) {
+    console.log(value);
+}
 
-    function newTagAdded(value, $item) {
-        console.log('new item: ' + value);
-        console.log($item);
-    }
+function newTagAdded(value, $item) {
+    console.log('new item: ' + value);
+    console.log($item);
+}
 </script>
