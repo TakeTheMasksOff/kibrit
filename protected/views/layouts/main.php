@@ -5,9 +5,6 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <?php  if (!empty($this->pageDescription)){echo '<meta name="description" content="' . $this->pageDescription . '" />';}?>
-          <?php if ($this->route === 'site/products' || $this->route === 'site/works' || $this->route === 'site/services'):?>
-                <meta name="fragment" content="!">
-          <?php endif;?> 
         <link rel="shortcut icon" href="/favicon.ico" />
         <?//php print_r(Yii::app()->getController()->getAction()->controller->action->id) ?>
         <link rel="alternate" hreflang="az" href="http://kibrit.tech/az<?=(Yii::app()->getController()->getAction()->controller->action->id != "" && Yii::app()->getController()->getAction()->controller->action->id != 'index') ? '/'.Yii::app()->getController()->getAction()->controller->action->id : '';?>" />

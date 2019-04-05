@@ -3,19 +3,11 @@
 ---------------------------------------------*/
 
 jQuery(document).ready(function($) {
-  jQuery("#content-block").on("click", "button.outlined-btn", function(event) {
+  jQuery(".content-block").on("click", "button.request-presentation", function(event) {
     $(".hideEl").toggle();
-    var productName = $("h2.presenReq").text();
-    $("#RequestPresentationForm_productName").val(productName);
   });
 
   var isLateralNavAnimating = false;
-
-  //open/close lateral navigation
-
-  $(".sidebar-nav > li > a, .showRightBlock").on("click", function() {
-    openRightBlock();
-  });
 
   // if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
   //    $(".cd-title").click(function(){
@@ -25,10 +17,6 @@ jQuery(document).ready(function($) {
   // }
 
   $(document).mouseup(function(event) {
-    if ($(event.target).closest("#rightBlock").length || $("#rightBlock").css("width") == "0px")
-      return;
-    closeRightBlock();
-
     if ($(event.target).closest("#map-canvas").length) return;
     $("#map-canvas").css("width", "0");
     event.stopPropagation();
@@ -171,36 +159,6 @@ function hashbangInterceptor(url) {
   };
   xhttp.open("GET", url, true);
   xhttp.send();
-}
-
-function openRightBlock() {
-  if (window.matchMedia("(max-width: 768px)").matches) {
-    $("#rightBlock").css("width", "100%");
-  } else {
-    $("#rightBlock").css("width", "66.666%");
-  }
-
-  $(".info-content")
-    .css("opacity", "1")
-    .css("height", "auto");
-  $("body").css("overflow", "hidden");
-  $("#rightBlock").css("overflow-y", "auto");
-
-  // $(".owl-carousel").owlCarousel({
-  //   margin: 10,
-  //   nav: true
-  // });
-}
-
-function closeRightBlock() {
-  $(".hideEl").css("display", "none");
-  $("#content-block").empty();
-  $(".info-content")
-    .css("opacity", "0")
-    .css("height", "0");
-  $("#rightBlock").css("width", "0");
-  $("body").css("overflow", "auto");
-  $("#rightBlock").css("overflow-y", "hidden");
 }
 
 function openGmapBlock() {

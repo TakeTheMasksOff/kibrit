@@ -4,7 +4,9 @@
         (string) $model->getTranslation($this->Lang)->name,
     );
 ?>
-
+<?php if($this->route === 'site/partners' || $this->route === 'site/certificates'):?>
+<div class="sharethis-sticky-share-buttons centered-vertical" ></div>
+<?php endif;?>
 <div class='main'>
     <div class="container-fluid">
         <div class="row title-block">

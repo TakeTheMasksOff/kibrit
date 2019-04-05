@@ -94,24 +94,12 @@ class SiteController extends Controller
 
     public function populateSitemap( &$list )
     {
-            $portfolio = $this->active = Menus::model()->active()->findAll(array('condition'=>'active=1 and deleted=0 and parent_id=80 and keyword!=""'));
-
-            $products = $this->active = Menus::model()->active()->findAll(array('condition'=>'active=1 and deleted=0 and parent_id=2 and keyword!=""'));
-
-            $services = $this->active = Menus::model()->active()->findAll(array('condition'=>'active=1 and deleted=0 and parent_id=10 and keyword!=""'));
-
             $output = array();
-            $output['model']=  Articles::model()->findByPk($id);
             $output['parent'] = $this->active = ($output['model']->parent?$output['model']->parent:$output['model']->parent->getparent);
             if (!$output['parent'])
                 $output['parent'] = $this->active = Menus::model()->findByAttributes(array('keyword'=>'blog'));
-
             $crit = new CDbCriteria();
-
             $crit->with = array(
-                // 'translations'=>array(
-                //     'together'=>true,
-                // ),
                 'parent'=>array(
                     'together'=>true,
                     'with'=>array(
@@ -134,19 +122,108 @@ class SiteController extends Controller
                 )
             );
             $parent = $output['parent']->id;
-
             $crit->addCondition("t.parent_id=$parent or parent.parent_id=$parent or getparent.parent_id=$parent or getparent2.parent_id=$parent",'AND');
-
             $crit->compare('t.parent_id',$output['model']->parent_id);
-            // $crit->order = 't.date desc';
+            $blogs = Articles::Model()->with()->articles()->active()->findAll($crit);
 
-            $output['news'] = Articles::Model()->with()->articles()->active()->findAll($crit);
+            // services
+            $output['parent'] = $this->active = ($output['model']->parent?$output['model']->parent:$output['model']->parent->getparent);
+            if (!$output['parent'])
+                $output['parent'] = $this->active = Menus::model()->findByAttributes(array('keyword'=>'services'));
+            $crit = new CDbCriteria();
+            $crit->with = array(
+                'parent'=>array(
+                    'together'=>true,
+                    'with'=>array(
+                        'getparent'=>array(
+                            'together'=>true,
+                            'with'=>array(
+                                'getparent'=>array(
+                                    'alias'=>'getparent2',
+                                    'together'=>true,
+                                    'with'=>array(
+                                        'getparent'=>array(
+                                            'alias'=>'getparent3',
+                                            'together'=>true
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    )
+                )
+            );
+            $parent = $output['parent']->id;
+            $crit->addCondition("t.parent_id=$parent or parent.parent_id=$parent or getparent.parent_id=$parent or getparent2.parent_id=$parent",'AND');
+            $crit->compare('t.parent_id',$output['model']->parent_id);
+            $services =  Articles::Model()->with()->articles()->active()->findAll($crit);
 
-            $blogs = $output['news'];
+            // portfolio
+            $output['parent'] = $this->active = ($output['model']->parent?$output['model']->parent:$output['model']->parent->getparent);
+            if (!$output['parent'])
+                $output['parent'] = $this->active = Menus::model()->findByAttributes(array('keyword'=>'portfolio'));
+            $crit = new CDbCriteria();
+            $crit->with = array(
+                'parent'=>array(
+                    'together'=>true,
+                    'with'=>array(
+                        'getparent'=>array(
+                            'together'=>true,
+                            'with'=>array(
+                                'getparent'=>array(
+                                    'alias'=>'getparent2',
+                                    'together'=>true,
+                                    'with'=>array(
+                                        'getparent'=>array(
+                                            'alias'=>'getparent3',
+                                            'together'=>true
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    )
+                )
+            );
+            $parent = $output['parent']->id;
+            $crit->addCondition("t.parent_id=$parent or parent.parent_id=$parent or getparent.parent_id=$parent or getparent2.parent_id=$parent",'AND');
+            $crit->compare('t.parent_id',$output['model']->parent_id);
+            $portfolio = Articles::Model()->with()->articles()->active()->findAll($crit);
+
+            // portfolio
+            $output['parent'] = $this->active = ($output['model']->parent?$output['model']->parent:$output['model']->parent->getparent);
+            if (!$output['parent'])
+                $output['parent'] = $this->active = Menus::model()->findByAttributes(array('keyword'=>'products'));
+            $crit = new CDbCriteria();
+            $crit->with = array(
+                'parent'=>array(
+                    'together'=>true,
+                    'with'=>array(
+                        'getparent'=>array(
+                            'together'=>true,
+                            'with'=>array(
+                                'getparent'=>array(
+                                    'alias'=>'getparent2',
+                                    'together'=>true,
+                                    'with'=>array(
+                                        'getparent'=>array(
+                                            'alias'=>'getparent3',
+                                            'together'=>true
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    )
+                )
+            );
+            $parent = $output['parent']->id;
+            $crit->addCondition("t.parent_id=$parent or parent.parent_id=$parent or getparent.parent_id=$parent or getparent2.parent_id=$parent",'AND');
+            $crit->compare('t.parent_id',$output['model']->parent_id);
+            $products =  Articles::Model()->with()->articles()->active()->findAll($crit);
 
             $langs = array("en", "az", "ru");
-
-            // Add primary items here               
+              
             $list[] = array(
                         'loc'=>$this->createAbsoluteUrl('/'),
                         'frequency'=>'monthly',
@@ -154,8 +231,8 @@ class SiteController extends Controller
                         'path'=>'',
                         );
             
-foreach($langs as $lang) 
-{
+    foreach($langs as $lang) 
+    {
             $list[] = array(
                         'loc'=>$this->createAbsoluteUrl('/'.$lang.'/history'),
                         'frequency'=>'monthly',
@@ -200,46 +277,52 @@ foreach($langs as $lang)
                         );
             foreach( $portfolio as $row )
             {
+                $item = Articles::model()->cache(3600)->with(array('translations'=>array('alias'=>'translations', 'together'=>true)))->findByPk($row->id);
+                $detail = Cleanurls::getUrlOrSave($item,$item->getTranslation($this->Lang)->name?$item->getTranslation($this->Lang)->name:'',$this->Lang);
                 $list[] = array( 
-                        'loc'=>$this->createAbsoluteUrl('/'.$lang.'/works#!'.$row->keyword),
+                        'loc'=>$this->createAbsoluteUrl('/'.$lang.'/portfolio/'.$detail),
                         'frequency'=>'weekly',
                         'priority'=>'1',
-                        'path'=>'/works#!'.$row->keyword,
+                        'path'=>'/portfolio/'.$detail,
                 );
             }
 
             foreach( $products as $row )
             {
+                $item = Articles::model()->cache(3600)->with(array('translations'=>array('alias'=>'translations', 'together'=>true)))->findByPk($row->id);
+                $detail = Cleanurls::getUrlOrSave($item,$item->getTranslation($this->Lang)->name?$item->getTranslation($this->Lang)->name:'',$this->Lang);
                 $list[] = array( 
-                        'loc'=>$this->createAbsoluteUrl('/'.$lang.'/products#!'.$row->keyword),
+                        'loc'=>$this->createAbsoluteUrl('/'.$lang.'/products/'.$detail),
                         'frequency'=>'weekly',
                         'priority'=>'1',
-                        'path'=>'/products#!'.$row->keyword,
+                        'path'=>'/products/'.$detail,
                 );
             }
 
             foreach( $services as $row )
             {
+                $item = Articles::model()->cache(3600)->with(array('translations'=>array('alias'=>'translations', 'together'=>true)))->findByPk($row->id);
+                $detail = Cleanurls::getUrlOrSave($item,$item->getTranslation($this->Lang)->name?$item->getTranslation($this->Lang)->name:'',$this->Lang);
                 $list[] = array( 
-                        'loc'=>$this->createAbsoluteUrl('/'.$lang.'/services#!'.$row->keyword),
+                        'loc'=>$this->createAbsoluteUrl('/'.$lang.'/services/'.$detail),
                         'frequency'=>'weekly',
                         'priority'=>'1',
-                        'path'=>'/services#!'.$row->keyword,
+                        'path'=>'/services/'.$detail,
                 );
             }
 
             foreach( $blogs as $row )
             {
                 $item = Articles::model()->cache(3600)->with(array('translations'=>array('alias'=>'translations', 'together'=>true)))->findByPk($row->id);
-                $article = Cleanurls::getUrlOrSave($item,$item->getTranslation($this->Lang)->name?$item->getTranslation($this->Lang)->name:'',$this->Lang);
+                $detail = Cleanurls::getUrlOrSave($item,$item->getTranslation($this->Lang)->name?$item->getTranslation($this->Lang)->name:'',$this->Lang);
                 $list[] = array( 
-                        'loc'=> $this->createAbsoluteUrl('/'.$lang.'/blog/'.$article),
+                        'loc'=> $this->createAbsoluteUrl('/'.$lang.'/blog/'.$detail),
                         'frequency'=>'weekly',
                         'priority'=>'1',
-                        'path'=>'/blog/'.$article,
+                        'path'=>'/blog/'.$detail,
                 );
             }
-}           
+    }           
     }
     public function actionIndex(){
             $error = 0;
@@ -247,228 +330,257 @@ foreach($langs as $lang)
            // $this->pageDescription = '';
             $output['company'] = Menus::model()->findByAttributes(array('keyword'=>'company'));
             $output['services'] = Menus::model()->findByAttributes(array('keyword'=>'services'));
-            $output['works'] = Menus::model()->findByAttributes(array('keyword'=>'works'));
+            $output['works'] = Menus::model()->findByAttributes(array('keyword'=>'portfolio'));
 
             $this->render('frontPage', $output );
     }
 
-    public function actionServices($keyword = null){
+    public function actionServices($detail = null){
+        if($detail === null) {
+            $error = 0;
+            $output = array();
 
-        if (Yii::app()->request->isAjaxRequest) {
-            $title = $this->active = Menus::model()->findByAttributes(array('keyword'=>$keyword))->getTranslation($this->Lang)->name; 
-            $content = $this->active = Menus::model()->findByAttributes(array('keyword'=>$keyword))->getContentTranslation($this->Lang)->body;
+            $output['model'] = $this->active = Menus::model()->findByAttributes(array('keyword'=>'services'));
+            $this->pageDescription = $output['model']->getContentTranslation($this->Lang)->description;
+            $tmp = Menus::model()->with(array('activeChildren'=>array('together'=>true)))->findByAttributes(array('keyword'=>'aboutus'));
+            $output['sidebar'] = $output['model']->hasActiveChildren?
+                                    $output['model']->activeChildren:
+                                    (isset($output['model']->getparent)&&($output['model']->getparent->hasActiveChildren>1) &&count($output['model']->getparent->activeChildren)?
+                                                $output['model']->getparent->activeChildren:
+                                                $tmp->activeChildren
+                                    );
+        
+            $output['parent'] = Menus::model()->findByAttributes(array('keyword'=>'aboutus')); 
 
-            $this->renderPartial('_services', array('blockContent'=>$content, 'title'=>$title, 'keyword' => $keyword), false, false);
-            Yii::app()->end();
-             return true;
-        } else if ($keyword){
-            Yii::app()->clientScript->registerScript('ajax_reflesh', '
-                $(".showRightBlock").on("click", function(){
-                    openRightBlock();
-                });
-                $(".showRightBlock.'.$keyword.'").click();', CClientScript::POS_LOAD);
-            //return false;
+            $this->render('services',$output);
         } else {
-            Yii::app()->clientScript->registerScript('ajax_with_fragment', '
-                if (window.location.hash) {
-                    $(".showRightBlock").on("click", function(){
-                    openRightBlock();
-                });
-                $(".showRightBlock."+window.location.hash.replace( /#!/, "" ).replace(/\/$/, "").split("?")[0] ).click();
-                }
-            ', CClientScript::POS_LOAD);
-        }
+            $output = array();
+            $cleanUrl = Cleanurls::model()->findByAttributes(array('url'=> $detail));
+            $output['model'] = Articles::model()->findByPk($cleanUrl['parent_id']);
+            $this->pageDescription = $output['model']->getTranslation($this->Lang)->description;
+            $output['parent'] = $this->active = ($output['model']->parent && $output['model']->parent?$output['model']->parent:$output['model']->parent->getparent);
+            if (!$output['parent'])
+                $output['parent'] = $this->active = Menus::model()->findByAttributes(array('keyword'=>'services'));
 
-        $output = array();
-        $output['model'] = $this->active = Menus::model()->with()->findByAttributes(array('keyword'=>'services'));
-        $this->pageDescription = $output['model']->getContentTranslation($this->Lang)->description;
-        $tmp = Menus::model()->with(array('activeChildren'=>array('together'=>true)))->findByAttributes(array('keyword'=>'aboutus'));
-        $output['sidebar'] = $output['model']->hasActiveChildren?
-                                $output['model']->activeChildren:
-                                (isset($output['model']->getparent)&&($output['model']->getparent->hasActiveChildren>1) &&count($output['model']->getparent->activeChildren)?
-                                            $output['model']->getparent->activeChildren:
-                                            $tmp->activeChildren
-                                );
-                                
-        $output['formModel'] = new RequestPresentationForm;
-        if(isset($_POST['RequestPresentationForm']))
-        {
-            $output['formModel']->attributes=$_POST['RequestPresentationForm'];
-            if($output['formModel']->validate())
-            {
-                try {
-                    Yii::import('application.extensions.phpmailer.JPhpMailer');
-                    $mail = new JPhpMailer;
-                    $mail->IsSMTP();
-                    $mail->SMTPSecure = "tls";  
-                    $mail->Host = Yii::app()->controller->getSetting('smtpHost'); 
-                    $mail->SMTPAuth = true;
-                    $mail->Username = Yii::app()->controller->getSetting('smtpUsername');
-                    $mail->Password = Yii::app()->controller->getSetting('smtpPassword');
-                    $mail->Port = '587'; 
-                    $mail->IsHTML(true);
-                    $mail->SMTPAuth   = true;  
-                    $mail->CharSet = 'utf-8';  
-                    $mail->SMTPDebug  = 1;
-                    $mail->SetFrom(Yii::app()->controller->getSetting('contactEmail'), 'Admin');
-                    $mail->Subject = 'Request Presentation Form: Kibrit web site';
-                    $mail->AltBody = 'To view the message, please use an HTML compatible email viewer!';
+            $crit = new CDbCriteria();
+            $crit->with = array(
+                'translations'=>array(
+                    'together'=>true,
+                ),
+                'photos'=>array(
+                    'together'=>true,
+                ),
+            );
+            $crit->compare('t.parent_id',$output['model']->parent_id);
+            $crit->order = 't.date desc';
+            $output['services'] = Articles::model()->findAll($crit);
 
-                    $msg='<b>Request Product Name: </b> '.$_POST['RequestPresentationForm']['productName'].'<br />
-                    <b>'.Yii::t("frontend.strings","Name").': </b> '.$_POST['RequestPresentationForm']['name'].'<br />
-                    <b>'.Yii::t("frontend.strings","Organization").': </b> '.nl2br($_POST['RequestPresentationForm']['organization']).'
-                    <b>'.Yii::t("frontend.strings","Email").': </b> '.$_POST['RequestPresentationForm']['email'].'<br />
-                    <b>'.Yii::t("frontend.strings","Phone").': </b> '.$_POST['RequestPresentationForm']['phone'].'<br />
-                    ';
-                    $mail->MsgHTML($msg);
-                    $mail->AddAddress(Yii::app()->controller->getSetting('contactEmail'), 'Kibrit');
-                    if ($mail->Send())
-                        Yii::app()->user->setFlash('contactform-success',  Utilities::t ('Message successfully sent. We will contact you as soon as possible'));
-                    else{
-                        Yii::app()->user->setFlash('contactform-error',  Utilities::t ('Message could not be sent. Please try after a while.'));
+                $parent = $output['parent']->id;
+                $crit->addCondition("parent.id=$parent or parent.parent_id=$parent or getparent.parent_id=$parent or getparent2.parent_id=$parent");
+                $output['pagination'] = $pages;
+                $output['parentcrumb'] = $output['parent'];
+                $output['topcrumb'] = $output['parentcrumb']->getparent;
+
+
+                $output['formModel'] = new RequestPresentationForm;
+                if(isset($_POST['RequestPresentationForm']))
+                {
+                    $output['formModel']->attributes=$_POST['RequestPresentationForm'];
+                    if($output['formModel']->validate())
+                    {
+                        try {
+                            Yii::import('application.extensions.phpmailer.JPhpMailer');
+                            $mail = new JPhpMailer;
+                            $mail->IsSMTP();
+                            $mail->SMTPSecure = "tls";  
+                            $mail->Host = Yii::app()->controller->getSetting('smtpHost'); 
+                            $mail->SMTPAuth = true;
+                            $mail->Username = Yii::app()->controller->getSetting('smtpUsername');
+                            $mail->Password = Yii::app()->controller->getSetting('smtpPassword');
+                            $mail->Port = '587'; 
+                            $mail->IsHTML(true);
+                            $mail->SMTPAuth   = true;  
+                            $mail->CharSet = 'utf-8';  
+                            $mail->SMTPDebug  = 1;
+                            $mail->SetFrom(Yii::app()->controller->getSetting('contactEmail'), 'Admin');
+                            $mail->Subject = 'Request Presentation Form: Kibrit web site';
+                            $mail->AltBody = 'To view the message, please use an HTML compatible email viewer!';
+        
+                            $msg='<b>Request Product Name: </b> '.$_POST['RequestPresentationForm']['productName'].'<br />
+                            <b>'.Yii::t("frontend.strings","Name").': </b> '.$_POST['RequestPresentationForm']['name'].'<br />
+                            <b>'.Yii::t("frontend.strings","Organization").': </b> '.nl2br($_POST['RequestPresentationForm']['organization']).'
+                            <b>'.Yii::t("frontend.strings","Email").': </b> '.$_POST['RequestPresentationForm']['email'].'<br />
+                            <b>'.Yii::t("frontend.strings","Phone").': </b> '.$_POST['RequestPresentationForm']['phone'].'<br />
+                            ';
+                            $mail->MsgHTML($msg);
+                            $mail->AddAddress(Yii::app()->controller->getSetting('contactEmail'), 'Kibrit');
+                            if ($mail->Send())
+                                Yii::app()->user->setFlash('contactform-success',  Utilities::t ('Message successfully sent. We will contact you as soon as possible'));
+                            else{
+                                Yii::app()->user->setFlash('contactform-error',  Utilities::t ('Message could not be sent. Please try after a while.'));
+                            }
+                            //$this->refresh();
+                        }
+                        catch(Exception $e) {
+                          echo 'Message: ' .$e->getMessage();
+                        }
                     }
-                    //$this->refresh();
                 }
-                catch(Exception $e) {
-                  echo 'Message: ' .$e->getMessage();
-                }
-            }
-        }
+        
 
-        $output['parent'] = Menus::model()->findByAttributes(array('keyword'=>'aboutus'));  
-        $this->render('services',$output);
+            $this->render('servicesDetail',$output);
+        }
     }
-    public function actionProducts($keyword = null)  {
-        if (Yii::app()->request->isAjaxRequest) {
-            $title = $this->active = Menus::model()->findByAttributes(array('keyword'=>$keyword))->getContentTranslation($this->Lang)->name; 
-            $content = $this->active = Menus::model()->findByAttributes(array('keyword'=>$keyword))->getContentTranslation($this->Lang)->body;
+    public function actionProducts($detail = null)  { 
+        
+        if($detail === null) {
+            $error = 0;
+            $output = array();
 
-            $this->renderPartial('_products', array('blockContent'=>$content, 'title'=>$title, 'keyword' => $keyword), false, false);
+            $output['model'] = $this->active = Menus::model()->findByAttributes(array('keyword'=>'products'));
+            $this->pageDescription = $output['model']->getContentTranslation($this->Lang)->description;
+            $tmp = Menus::model()->with(array('activeChildren'=>array('together'=>true)))->findByAttributes(array('keyword'=>'aboutus'));
+            $output['sidebar'] = $output['model']->hasActiveChildren?
+                                    $output['model']->activeChildren:
+                                    (isset($output['model']->getparent)&&($output['model']->getparent->hasActiveChildren>1) &&count($output['model']->getparent->activeChildren)?
+                                                $output['model']->getparent->activeChildren:
+                                                $tmp->activeChildren
+                                    );
+        
+            $output['parent'] = Menus::model()->findByAttributes(array('keyword'=>'aboutus')); 
 
-
-            Yii::app()->end();
-            // return true;
-        } else if ($keyword){
-            Yii::app()->clientScript->registerScript('ajax_reflesh', '
-                $(".showRightBlock").on("click", function(){
-                    openRightBlock();
-                });
-                $(".showRightBlock.'.$keyword.'").click();', CClientScript::POS_LOAD);
-            //return false;
+            $this->render('products',$output);
         } else {
-            Yii::app()->clientScript->registerScript('ajax_with_fragment', '
+            $output = array();
+            $cleanUrl = Cleanurls::model()->findByAttributes(array('url'=> $detail));
+            $output['detail']=$detail;
+            $output['model'] = Articles::model()->findByPk($cleanUrl['parent_id']);
+            $this->pageDescription = $output['model']->getTranslation($this->Lang)->description;
+            $output['parent'] = $this->active = ($output['model']->parent && $output['model']->parent?$output['model']->parent:$output['model']->parent->getparent);
+            if (!$output['parent'])
+                $output['parent'] = $this->active = Menus::model()->findByAttributes(array('keyword'=>'products'));
 
-                if (window.location.hash) {
-                    $(".showRightBlock").on("click", function(){
-                    openRightBlock();
-                    });
-                $(".showRightBlock."+window.location.hash.replace( /#!/, "" ).replace(/\/$/, "").split("?")[0] ).click();
-                }
-            ', CClientScript::POS_LOAD);
-        }
-        $error = 0;
-        $output = array();
-        $output['model'] = $this->active = Menus::model()->findByAttributes(array('keyword'=>'products'));
-        $this->pageDescription = $output['model']->getContentTranslation($this->Lang)->description;
-        $tmp = Menus::model()->with(array('activeChildren'=>array('together'=>true)))->findByAttributes(array('keyword'=>'aboutus'));
-        $output['sidebar'] = $output['model']->hasActiveChildren?
-                                $output['model']->activeChildren:
-                                (isset($output['model']->getparent)&&($output['model']->getparent->hasActiveChildren>1) &&count($output['model']->getparent->activeChildren)?
-                                            $output['model']->getparent->activeChildren:
-                                            $tmp->activeChildren
-                                );
+            $crit = new CDbCriteria();
+            $crit->with = array(
+                'translations'=>array(
+                    'together'=>true,
+                ),
+                'photos'=>array(
+                    'together'=>true,
+                ),
+            );
+            $crit->compare('t.parent_id',$output['model']->parent_id);
+            $crit->order = 't.date desc';
+            $output['products'] = Articles::model()->findAll($crit);
 
-        $output['formModel'] = new RequestPresentationForm;
-        if(isset($_POST['RequestPresentationForm']))
-        {
-            $output['formModel']->attributes=$_POST['RequestPresentationForm'];
-            if($output['formModel']->validate())
-            {
-                try {
-                    Yii::import('application.extensions.phpmailer.JPhpMailer');
-                    $mail = new JPhpMailer;
-                    $mail->IsSMTP();
-                    $mail->SMTPSecure = "tls";  
-                    $mail->Host = Yii::app()->controller->getSetting('smtpHost'); 
-                    $mail->SMTPAuth = true;
-                    $mail->Username = Yii::app()->controller->getSetting('smtpUsername');
-                    $mail->Password = Yii::app()->controller->getSetting('smtpPassword');
-                    $mail->Port = '587'; 
-                    $mail->IsHTML(true);
-                    $mail->SMTPAuth   = true;  
-                    $mail->CharSet = 'utf-8';  
-                    $mail->SMTPDebug  = 1;
-                    $mail->SetFrom(Yii::app()->controller->getSetting('contactEmail'), 'Admin');
-                    $mail->Subject = 'Request Presentation Form: Kibrit web site';
-                    $mail->AltBody = 'To view the message, please use an HTML compatible email viewer!';
+                $parent = $output['parent']->id;
+                $crit->addCondition("parent.id=$parent or parent.parent_id=$parent or getparent.parent_id=$parent or getparent2.parent_id=$parent");
+                $output['pagination'] = $pages;
+                $output['parentcrumb'] = $output['parent'];
+                $output['topcrumb'] = $output['parentcrumb']->getparent;
 
-                    $msg='<b>Request Product Name: </b> '.$_POST['RequestPresentationForm']['productName'].'<br />
-                    <b>'.Yii::t("frontend.strings","Name").': </b> '.$_POST['RequestPresentationForm']['name'].'<br />
-                    <b>'.Yii::t("frontend.strings","Organization").': </b> '.nl2br($_POST['RequestPresentationForm']['organization']).'
-                    <b>'.Yii::t("frontend.strings","Email").': </b> '.$_POST['RequestPresentationForm']['email'].'<br />
-                    <b>'.Yii::t("frontend.strings","Phone").': </b> '.$_POST['RequestPresentationForm']['phone'].'<br />
-                    ';
-                    $mail->MsgHTML($msg);
-                    $mail->AddAddress(Yii::app()->controller->getSetting('contactEmail'), 'Kibrit');
-                    if ($mail->Send())
-                        Yii::app()->user->setFlash('contactform-success',  Utilities::t ('Message successfully sent. We will contact you as soon as possible'));
-                    else{
-                        Yii::app()->user->setFlash('contactform-error',  Utilities::t ('Message could not be sent. Please try after a while.'));
+                $output['formModel'] = new RequestPresentationForm;
+                if(isset($_POST['RequestPresentationForm']))
+                {
+                    $output['formModel']->attributes=$_POST['RequestPresentationForm'];
+                    if($output['formModel']->validate())
+                    {
+                        try {
+                            Yii::import('application.extensions.phpmailer.JPhpMailer');
+                            $mail = new JPhpMailer;
+                            $mail->IsSMTP();
+                            $mail->SMTPSecure = "tls";  
+                            $mail->Host = Yii::app()->controller->getSetting('smtpHost'); 
+                            $mail->SMTPAuth = true;
+                            $mail->Username = Yii::app()->controller->getSetting('smtpUsername');
+                            $mail->Password = Yii::app()->controller->getSetting('smtpPassword');
+                            $mail->Port = '587'; 
+                            $mail->IsHTML(true);
+                            $mail->SMTPAuth   = true;  
+                            $mail->CharSet = 'utf-8';  
+                            $mail->SMTPDebug  = 1;
+                            $mail->SetFrom(Yii::app()->controller->getSetting('contactEmail'), 'Admin');
+                            $mail->Subject = 'Request Presentation Form: Kibrit web site';
+                            $mail->AltBody = 'To view the message, please use an HTML compatible email viewer!';
+        
+                            $msg='<b>Request Product Name: </b> '.$_POST['RequestPresentationForm']['productName'].'<br />
+                            <b>'.Yii::t("frontend.strings","Name").': </b> '.$_POST['RequestPresentationForm']['name'].'<br />
+                            <b>'.Yii::t("frontend.strings","Organization").': </b> '.nl2br($_POST['RequestPresentationForm']['organization']).'
+                            <b>'.Yii::t("frontend.strings","Email").': </b> '.$_POST['RequestPresentationForm']['email'].'<br />
+                            <b>'.Yii::t("frontend.strings","Phone").': </b> '.$_POST['RequestPresentationForm']['phone'].'<br />
+                            ';
+                            $mail->MsgHTML($msg);
+                            $mail->AddAddress(Yii::app()->controller->getSetting('contactEmail'), 'Kibrit');
+                            if ($mail->Send())
+                                Yii::app()->user->setFlash('contactform-success',  Utilities::t ('Message successfully sent. We will contact you as soon as possible'));
+                            else{
+                                Yii::app()->user->setFlash('contactform-error',  Utilities::t ('Message could not be sent. Please try after a while.'));
+                            }
+                            //$this->refresh();
+                        }
+                        catch(Exception $e) {
+                            echo 'Message: ' .$e->getMessage();
+                        }
                     }
-                    $this->refresh();
                 }
-                catch(Exception $e) {
-                  echo 'Message: ' .$e->getMessage();
-                }
-            }
+
+            $this->render('detail',$output);
         }
 
-        $output['parent'] = Menus::model()->findByAttributes(array('keyword'=>'aboutus'));  
-        $this->render('products', $output );
-    }
-    public function actionWorks($keyword = null){
-        if (Yii::app()->request->isAjaxRequest) {
-            $title = $this->active = Menus::model()->findByAttributes(array('keyword'=>$keyword))->getContentTranslation($this->Lang)->name; 
-            $content = $this->active = Menus::model()->findByAttributes(array('keyword'=>$keyword))->getContentTranslation($this->Lang)->body;
 
-            $this->renderPartial('_works', array('blockContent'=>$content, 'title'=>$title, 'keyword' => $keyword), false, false);
-            Yii::app()->end();
-             return true;
-        } else if ($keyword){
-            Yii::app()->clientScript->registerScript('ajax_reflesh', '
-                $(".showRightBlock").on("click", function(){
-                    openRightBlock();
-                });
-                $(".showRightBlock.'.$keyword.'").click();', CClientScript::POS_LOAD);
-            //return false;
+    }
+    public function actionPortfolio($detail = null){
+        if($detail === null) {
+            $error = 0;
+            $output = array();
+
+            $output['model'] = $this->active = Menus::model()->findByAttributes(array('keyword'=>'portfolio'));
+            $this->pageDescription = $output['model']->getContentTranslation($this->Lang)->description;
+            $tmp = Menus::model()->with(array('activeChildren'=>array('together'=>true)))->findByAttributes(array('keyword'=>'aboutus'));
+            $output['sidebar'] = $output['model']->hasActiveChildren?
+                                    $output['model']->activeChildren:
+                                    (isset($output['model']->getparent)&&($output['model']->getparent->hasActiveChildren>1) &&count($output['model']->getparent->activeChildren)?
+                                                $output['model']->getparent->activeChildren:
+                                                $tmp->activeChildren
+                                    );
+        
+            $output['parent'] = Menus::model()->findByAttributes(array('keyword'=>'aboutus')); 
+
+            $this->render('portfolio',$output);
         } else {
-            Yii::app()->clientScript->registerScript('ajax_with_fragment', '
-                if (window.location.hash) {
-                    $(".showRightBlock").on("click", function(){
-                    openRightBlock();
-                });
-                console.log(window.location.hash.replace( /#!/, "" ));
-                $(".showRightBlock."+window.location.hash.replace( /#!/, "" ).replace(/\/$/, "").split("?")[0] ).click();
-                }
-            ', CClientScript::POS_LOAD);
+            $output = array();
+            $cleanUrl = Cleanurls::model()->findByAttributes(array('url'=> $detail));
+            
+            $output['model'] = Articles::model()->findByPk($cleanUrl['parent_id']);
+            $this->pageDescription = $output['model']->getTranslation($this->Lang)->description;
+            $output['parent'] = $this->active = ($output['model']->parent && $output['model']->parent?$output['model']->parent:$output['model']->parent->getparent);
+            if (!$output['parent'])
+                $output['parent'] = $this->active = Menus::model()->findByAttributes(array('keyword'=>'portfolio'));
+
+            $crit = new CDbCriteria();
+            $crit->with = array(
+                'translations'=>array(
+                    'together'=>true,
+                ),
+                'photos'=>array(
+                    'together'=>true,
+                ),
+            );
+            $crit->compare('t.parent_id',$output['model']->parent_id);
+            $crit->order = 't.date desc';
+            $output['products'] = Articles::model()->findAll($crit);
+
+                $parent = $output['parent']->id;
+                $crit->addCondition("parent.id=$parent or parent.parent_id=$parent or getparent.parent_id=$parent or getparent2.parent_id=$parent");
+                $output['pagination'] = $pages;
+                $output['parentcrumb'] = $output['parent'];
+                $output['topcrumb'] = $output['parentcrumb']->getparent;
+
+            $this->render('detail',$output);
         }
-
-        $output = array();
-        $output['model']=  $this->active = Menus::model()->with()->findByAttributes(array('keyword'=>'works'));
-        $this->pageDescription = $output['model']->getContentTranslation($this->Lang)->description;
-        $tmp = Menus::model()->with(array('activeChildren'=>array('together'=>true)))->findByAttributes(array('keyword'=>'aboutus'));
-        $output['sidebar'] = $output['model']->hasActiveChildren?
-                                $output['model']->activeChildren:
-                                (isset($output['model']->getparent)&&($output['model']->getparent->hasActiveChildren>1) &&count($output['model']->getparent->activeChildren)?
-                                            $output['model']->getparent->activeChildren:
-                                            $tmp->activeChildren
-                                );
-        $output['parent'] = Menus::model()->findByAttributes(array('keyword'=>'aboutus'));
-        $this->render('works',$output);
     }
-    public function actionBlog($type=false, $article = null){
-
-        if($article === null) {
+    public function actionBlog($type=false, $detail = null){
+        if($detail === null) {
             $output = array();
             $output['parent'] = $this->active = Menus::model()->findByAttributes(array('keyword'=>'blog'));
             $crit = new CDbCriteria;
@@ -521,7 +633,7 @@ foreach($langs as $lang)
             $this->render('news', $output);
         } else {
             $output = array();
-            $cleanUrl = Cleanurls::model()->findByAttributes(array('url'=> $article));
+            $cleanUrl = Cleanurls::model()->findByAttributes(array('url'=> $detail));
             $output['model'] = Articles::model()->findByPk($cleanUrl['parent_id']);
             $this->pageDescription = $output['model']->getTranslation($this->Lang)->description;
             $output['parent'] = $this->active = ($output['model']->parent && $output['model']->parent?$output['model']->parent:$output['model']->parent->getparent);
@@ -582,20 +694,92 @@ foreach($langs as $lang)
         $output['parent'] = Menus::model()->findByAttributes(array('keyword'=>'aboutus'));
         $this->render('static',$output);
     }
-    public function actionVacancies(){
-        $error = 0;
-        $output = array();
-        $output['model'] = $this->active = Menus::model()->findByAttributes(array('keyword'=>'vacancies'));
-        $this->pageDescription = $output['model']->getContentTranslation($this->Lang)->description;
-        $tmp = Menus::model()->with(array('activeChildren'=>array('together'=>true)))->findByAttributes(array('keyword'=>'aboutus'));
-        $output['sidebar'] = $output['model']->hasActiveChildren?
-                                $output['model']->activeChildren:
-                                (isset($output['model']->getparent)&&($output['model']->getparent->hasActiveChildren>1) &&count($output['model']->getparent->activeChildren)?
-                                            $output['model']->getparent->activeChildren:
-                                            $tmp->activeChildren
-                                );
-        $output['parent'] = Menus::model()->findByAttributes(array('keyword'=>'aboutus'));
-        $this->render('static',$output);
+
+    public function actionVacancies($type=false, $detail = null){
+        if($detail === null) {
+            $output = array();
+            $output['parent'] = $this->active = Menus::model()->findByAttributes(array('keyword'=>'vacancies'));
+            $crit = new CDbCriteria;
+            $crit->order = 't.date desc';
+            $crit->compare('type', 'Menus');
+            $crit->with = array(
+                // 'translations'=>array(
+                //     'together'=>true,
+                // ),
+                'parent'=>array(
+                    'together'=>true,
+                    'with'=>array(
+                        'getparent'=>array(
+                            'together'=>true,
+                            'with'=>array(
+                                'getparent'=>array(
+                                    'alias'=>'getparent2',
+                                    'together'=>true,
+                                    'with'=>array(
+                                        'getparent'=>array(
+                                            'alias'=>'getparent3',
+                                            'together'=>true
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    )
+                )
+            );
+            if ($type)
+                $parent = (int) $type;
+            else $parent = $output['parent']->id;
+
+             $crit->addCondition("parent.id=$parent or parent.parent_id=$parent or getparent.parent_id=$parent or getparent2.parent_id=$parent");
+
+             $count=Articles::Model()->with()->articles()->active()->count($crit);
+             $pages=new CPagination($count);
+
+             $pages->pageSize=3;
+             $pages->applyLimit($crit);
+             $output['pagination'] = $pages;
+
+            $output['news']=Articles::Model()->with()->articles()->active()->findAll($crit);
+            //$output['newsSub'] = $this->active = Menus::model()->findByPk($parent);
+            $output['parentcrumb'] = $output['parent'];
+          //  $this->crumbTitle = $output['newsSub']->getTranslation($this->Lang)->name;
+            $output['type'] = $type;
+            
+            $this->render('news', $output);
+        } else {
+            $output = array();
+            $cleanUrl = Cleanurls::model()->findByAttributes(array('url'=> $detail));
+            $output['model'] = Articles::model()->findByPk($cleanUrl['parent_id']);
+            $this->pageDescription = $output['model']->getTranslation($this->Lang)->description;
+            $output['parent'] = $this->active = ($output['model']->parent && $output['model']->parent?$output['model']->parent:$output['model']->parent->getparent);
+            if (!$output['parent'])
+                $output['parent'] = $this->active = Menus::model()->findByAttributes(array('keyword'=>'allnews'));
+
+            $crit = new CDbCriteria();
+            $crit->with = array(
+                'translations'=>array(
+                    'together'=>true,
+                ),
+                'photos'=>array(
+                    'together'=>true,
+                ),
+            );
+            $crit->compare('t.parent_id',$output['model']->parent_id);
+            $crit->limit = 4;
+            $crit->order = 't.date desc';
+            $output['news'] = Articles::model()->findAll($crit);
+
+                if ($type)
+                    $parent = (int) $type;
+                else $parent = $output['parent']->id;
+                $crit->addCondition("parent.id=$parent or parent.parent_id=$parent or getparent.parent_id=$parent or getparent2.parent_id=$parent");
+                $output['pagination'] = $pages;
+                $output['parentcrumb'] = $output['parent'];
+                $output['topcrumb'] = $output['parentcrumb']->getparent;
+
+            $this->render('article',$output);
+        }
     }
     public function actionPhilosophy(){
         $error = 0;
@@ -705,15 +889,7 @@ foreach($langs as $lang)
                     else{
                         Yii::app()->user->setFlash('contactform-error',  Utilities::t ('Message could not be sent. Please try after a while.'));
                     }
-                    $this->refresh();
-
-                    // setcookie('FormSubmitted', '1');
-
-                    // if (isset($_COOKIE['FormSubmitted']))
-                    // {
-                    //     die('You may only submit this form once per session!');
-                    // }
-    
+                    $this->refresh();    
                 }
                 catch(Exception $e) {
                   echo 'Message: ' .$e->getMessage();

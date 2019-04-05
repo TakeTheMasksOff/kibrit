@@ -5,12 +5,12 @@
     );
     $this->pageDescription = $parent->getContentTranslation($this->Lang)->description;
 ?>
-
+<div class="sharethis-sticky-share-buttons centered-vertical" ></div>
 <div class="main" style="background-position: 50% 0px;">
     <div class="container-fluid ">
         <div class="row title-block">
-            <div class="col-md-2 col-lg-2"></div>
-            <div class="col-md-8 col-lg-8">
+            <div class="col-0 col-md-2 col-lg-2"></div>
+            <div class="col-12 col-md-8 col-lg-8">
                 <div class="title">
                     <h1><?php echo $parent->getTranslation($this->Lang)->name;?></h1>
                     <hr class="orange" />
@@ -37,12 +37,12 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-2 col-lg-2"></div>
+            <div class="col-0 col-md-2 col-lg-2"></div>
         </div>
 
         <div class='row'>
-            <div class="col-md-2 col-lg-2"></div>
-            <div class="col-md-6 col-lg-6 news-widget" id="outer">
+            <div class="col-0 col-md-2 col-lg-2"></div>
+            <div class="col-12 col-md-8 col-lg-8 news-widget mb80">
                 <?php
                     $this->widget('application.components.NewsList',array(
                         'items'=>$news,
@@ -52,8 +52,6 @@
                         'Lang'=>$this->Lang,
                     ));
                 ?>
-                <br />
-
                 <div class="clearfix"></div>
                 <? $this->widget('CLinkPager', array(
                     'internalPageCssClass' => '',
@@ -70,7 +68,7 @@
                     'htmlOptions' => array('class' => 'pagenav'),
                 ));?>
             </div>
-            <div class="col-md-2 col-lg-2 bottom-padding" style="background: #071F7A;">
+            <!-- <div class="col-md-2 col-lg-2 bottom-padding" style="background: #071F7A;">
                 <div class="filter-block">
                     <?php //$langs = array();$controller = Yii::app()->controller; $tmp = $_GET; ?>
 
@@ -92,8 +90,8 @@
                                   'showName' => false));?>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-2 col-lg-2"></div>
+            </div> -->
+            <div class="col-0 col-md-2 col-lg-2"></div>
         </div>
     </div>
 </div>

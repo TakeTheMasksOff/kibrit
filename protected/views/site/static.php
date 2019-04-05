@@ -54,7 +54,6 @@
                 <div class="col-md-2 col-lg-2 order-4"></div>
             </div>
         </div>
-
     </div>
     <footer class="text-center">
         <div class="nav pull-left d-none d-md-block">
@@ -73,3 +72,4 @@
                 href="/files/Kibrit_Profile_<?php echo $this->Lang; ?>.pdf" target="_blank">
                 <?php echo (Utilities::t('Download "Company profile"'));?></a></span>
     </footer>
+</div>
