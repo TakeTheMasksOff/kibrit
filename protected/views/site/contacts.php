@@ -24,7 +24,7 @@
         });
 
         var contentString = '<div id="google-popup">'+
-            '<p><b>Premium Plaza</b> <br /> 106, Yahya Bakuvi street, Baku, Azerbaijan, AZ1072</p>'+
+            '<span><b>Premium Plaza</b> <br /> 106, Yahya Bakuvi street, Baku, Azerbaijan, AZ1072</span>'+
             '</div>';
 
         var infowindow = new google.maps.InfoWindow({

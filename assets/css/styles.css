@@ -1998,8 +1998,8 @@ a {
 }  
 
 .gm-style .gm-style-iw:after {
-  border-left: 3px solid #FF9600;
-  border-bottom: 3px solid #FF9600;
+  border-left: 3px solid #FF9600 !important;
+  border-bottom: 3px solid #FF9600 !important;
 }  
 
 a.read_more {
@@ -2049,7 +2049,7 @@ form input.error {
   color: #fff;
   background-color: #122c84;
   width: 66.666%;
-  padding: 20px 0 40px;
+  padding: 0 0 40px;
 }
 
 .rightBlock .download-presentation {

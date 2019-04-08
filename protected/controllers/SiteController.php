@@ -235,14 +235,14 @@ class SiteController extends Controller
     {
             $list[] = array(
                         'loc'=>$this->createAbsoluteUrl('/'.$lang.'/history'),
-                        'frequency'=>'monthly',
-                        'priority'=>'0.5',
+                        'frequency'=>'yearly',
+                        'priority'=>'0.3',
                         'path'=>'/history',
                         );
             $list[] = array(
                         'loc'=>$this->createAbsoluteUrl('/'.$lang.'/philosophy'),
-                        'frequency'=>'monthly',
-                        'priority'=>'0.5',
+                        'frequency'=>'yearly',
+                        'priority'=>'0.3',
                         'path'=>'/philosophy',
                         ); 
             $list[] = array(
@@ -260,7 +260,7 @@ class SiteController extends Controller
             $list[] = array(
                         'loc'=>$this->createAbsoluteUrl('/'.$lang.'/team'),
                         'frequency'=>'monthly',
-                        'priority'=>'0.5',
+                        'priority'=>'0.3',
                         'path'=>'/team',
                         ); 
             $list[] = array(
@@ -272,7 +272,7 @@ class SiteController extends Controller
             $list[] = array(
                         'loc'=>$this->createAbsoluteUrl('/'.$lang.'/contacts'),
                         'frequency'=>'yearly',
-                        'priority'=>'0.8',
+                        'priority'=>'0.3',
                         'path'=>'/contacts',
                         );
             foreach( $portfolio as $row )
