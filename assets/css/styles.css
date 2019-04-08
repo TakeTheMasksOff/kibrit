@@ -1997,9 +1997,9 @@ a {
   padding: 12px 23px;
 }  
 
-.gm-style .gm-style-iw:after {
-  border-left: 3px solid #FF9600 !important;
-  border-bottom: 3px solid #FF9600 !important;
+.gm-style .gm-style-iw-t::after {
+  border-left: 3px solid #FF9600;
+  border-bottom: 3px solid #FF9600;
 }  
 
 a.read_more {
