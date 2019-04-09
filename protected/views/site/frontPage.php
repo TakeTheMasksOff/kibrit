@@ -10,7 +10,7 @@
                             <?php echo $company->getContentTranslation($this->Lang)->summary?></div>
                         <a href="/<?php echo $this->Lang?>/history">
                             <button
-                                class="details-more py-lg-2 walsheim-medium border-0 border-md-1"><?php echo (Utilities::t('See more'));?>
+                                class="details-more py-lg-2 walsheim-medium"><?php echo (Utilities::t('See more'));?>
                                 <svg class="arrow-right ml-2" width="21" height="14" viewBox="0 0 21 14" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path d="M1 7.00013L20 7.00013" stroke="white" stroke-width="2"
@@ -34,7 +34,7 @@
                             <?php echo $services->getContentTranslation($this->Lang)->summary?></div>
                         <a href="/<?php echo $this->Lang?>/services">
                             <button type="button"
-                                class="details-more py-lg-2 walsheim-medium border-0 border-md-1"><?php echo (Utilities::t('See more'));?>
+                                class="details-more py-lg-2 walsheim-medium"><?php echo (Utilities::t('See more'));?>
                                 <svg class="arrow-right ml-2" width="21" height="14" viewBox="0 0 21 14" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path d="M1 7.00013L20 7.00013" stroke="white" stroke-width="2"
@@ -58,7 +58,7 @@
                             <?php echo $works->getContentTranslation($this->Lang)->summary?></div>
                         <a href="/<?php echo $this->Lang?>/works">
                             <button
-                                class="details-more py-lg-2 walsheim-medium border-0 border-md-1"><?php echo (Utilities::t('See more'));?>
+                                class="details-more py-lg-2 walsheim-medium"><?php echo (Utilities::t('See more'));?>
                                 <svg class="arrow-right ml-2" width="21" height="14" viewBox="0 0 21 14" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path d="M1 7.00013L20 7.00013" stroke="white" stroke-width="2"

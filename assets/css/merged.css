@@ -10197,6 +10197,7 @@ footer {
   -ms-transform: translateX(-100%);
   -o-transform: translateX(-100%);
   transform: translateX(-100%);
+  font-size: 0px;
 }
 
 .cd-single-project:hover .image-works,
@@ -12273,6 +12274,7 @@ span.tag {
 
   .details-more {
     padding-left: 0;
+    border: 0;
   }
 }
 
