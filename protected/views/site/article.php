@@ -14,7 +14,12 @@
             <div class="col-12 col-md-8 col-lg-8">
                 <div class="title">
                     <div class="page-name"><?php echo $model->parent->getTranslation($this->Lang)->name; ?></div>
-                    <hr class="orange" />
+                    <hr class="orange d-none d-md-block" />
+                    <div class="d-block d-md-none mb20">
+                        <div class="back-to">
+                            <?php echo CHtml::link('<img src="/assets/images/arrow-left.png" alt=""><div class="line"></div>', $this->createUrl($model->parent->getTranslation($this->Lang)->link));?>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="pull-right d-none d-md-block">
@@ -79,12 +84,6 @@
                         'posts' => 20, // optional no. of posts (default: 10)
                         'width' => 600 // optional width of comment box (default: 470)
                     ))?> -->
-                </div>
-                <br />
-                <div class="pull-left">
-                    <div class="back-to">
-                        <?php echo CHtml::link('<img src="/assets/images/arrow-left.png" alt="">'.Utilities::t('Back to Blog'), $this->createUrl($model->parent->getTranslation($this->Lang)->link));?>
-                    </div>
                 </div>
                 <br><br>
             </div>
