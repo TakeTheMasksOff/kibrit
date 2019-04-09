@@ -23,8 +23,12 @@
           icon:  '/assets/images/gmap-marker.png'
         });
 
+        var contentString = '<div id="google-popup">'+
+            '<span><b>Premium Plaza</b> <br /> 106, Yahya Bakuvi street, Baku, Azerbaijan, AZ1072</span>'+
+            '</div>';
+
         var infowindow = new google.maps.InfoWindow({
-            content:"<b>Premium Plaza</b> <br /> 106, Yahya Bakuvi street, Baku, Azerbaijan, AZ1072"
+            content: contentString
         });
 
         google.maps.event.addListener(marker, 'click', function() {

@@ -63,26 +63,25 @@ class Controller extends CController
 				//$clientScript->registerCoreScript('jquery');
 
 				// $clientScript->registerScriptFile('/assets/javascripts/jquery.min.js');
-				$clientScript->registerScriptFile('/assets/javascripts/jquery-3.3.1.min.js');
-				// $clientScript->registerScriptFile('/assets/javascripts/owl.carousel.min.js');
-				// $clientScript->registerScriptFile('/assets/javascripts/popper.js');
-				$clientScript->registerScriptFile('/assets/javascripts/base64.js');
-                //             // $clientScript->registerScriptFile('/assets/javascripts/modernizr.custom.79639.js');
-                $clientScript->registerScriptFile('/assets/javascripts/modernizr.js');
-                $clientScript->registerScriptFile('/assets/javascripts/TweenMax.min.js');
-                $clientScript->registerScriptFile('/assets/javascripts/codyhouse.js');
-                $clientScript->registerScriptFile('/assets/javascripts/bootstrap.min.js');
-
-                $clientScript->registerScriptFile('/assets/javascripts/main.js');
+				// $clientScript->registerScriptFile('/assets/javascripts/jquery-3.3.1.min.js');
+				// // $clientScript->registerScriptFile('/assets/javascripts/popper.js');
+				// $clientScript->registerScriptFile('/assets/javascripts/base64.js');
+                // //             // $clientScript->registerScriptFile('/assets/javascripts/modernizr.custom.79639.js');
+                // $clientScript->registerScriptFile('/assets/javascripts/modernizr.js');
+                // $clientScript->registerScriptFile('/assets/javascripts/TweenMax.min.js');
+                // $clientScript->registerScriptFile('/assets/javascripts/codyhouse.js');
+                // $clientScript->registerScriptFile('/assets/javascripts/bootstrap.min.js');
+                // $clientScript->registerScriptFile('/assets/javascripts/main.js');
                 
-                $clientScript->registerCssFile('/assets/css/normalize.css');
-                $clientScript->registerCssFile('/assets/css/bootstrap.css');
-				$clientScript->registerCSSFile('/assets/css/styles.css');
-                $clientScript->registerCSSFile('/assets/css/font-awesome.min.css');
-                $clientScript->registerCSSFile('/assets/css/owl.carousel.min.css');
-                $clientScript->registerCSSFile('/assets/css/owl.theme.default.min.css');
-                // $clientScript->registerCssFile('/assets/css/merged.min.css');
-                //$clientScript->registerScriptFile('/assets/javascripts/merged.min.js');
+                // $clientScript->registerCssFile('/assets/css/normalize.css');
+                // $clientScript->registerCssFile('/assets/css/bootstrap.css');
+				// $clientScript->registerCSSFile('/assets/css/styles.css');
+                // $clientScript->registerCSSFile('/assets/css/font-awesome.min.css');
+                // $clientScript->registerCSSFile('/assets/css/owl.carousel.min.css');
+                // $clientScript->registerCSSFile('/assets/css/owl.theme.default.min.css');
+                $clientScript->registerCssFile('/assets/css/merged.min.css');
+				$clientScript->registerScriptFile('/assets/javascripts/merged.min.js');
+				$clientScript->registerScriptFile('/assets/javascripts/bootstrap.min.js');
 
 $this->imgUpl['gallery']= '/images/gallery/';
 $this->imgUpl['menu']= '/images/menu/';
@@ -94,43 +93,40 @@ $app->setLanguage($this->Lang);
 $this->pageTitle = Yii::t('frontend.strings','HTML.PageTitle');//$this->settings['companyName_'.$this->Lang]);
 }
 
-
 public function getSetting($param,$default=NULL){
-if (isset($this->settings[$param]))
-return $this->settings[$param];
-else return $default;
+	if (isset($this->settings[$param]))
+	return $this->settings[$param];
+	else return $default;
+	}
+	public function render($view, $data = null, $return = false) {
+	//ob_start("ob_gzhandler");
+	parent::render($view, $data, $return);
+	//ob_end_flush();
+	}
 }
-public function render($view, $data = null, $return = false) {
-//ob_start("ob_gzhandler");
-parent::render($view, $data, $return);
-//ob_end_flush();
-}
-
-}
-
 
 function mb_str_replace($needle, $replacement, $haystack){
-$needle_len = mb_strlen($needle);
-$replacement_len = mb_strlen($replacement);
-$pos = mb_strpos($haystack, $needle);
-while ($pos !== false)
-{
-$haystack = mb_substr($haystack, 0, $pos) . $replacement
-. mb_substr($haystack, $pos + $needle_len);
-$pos = mb_strpos($haystack, $needle, $pos + $replacement_len);
-}
-return $haystack;
-}
-function mb_ucasefirst($str){
-$str[0] = mb_strtoupper($str[0]);
-return $str;
+	$needle_len = mb_strlen($needle);
+	$replacement_len = mb_strlen($replacement);
+	$pos = mb_strpos($haystack, $needle);
+	while ($pos !== false)
+	{
+	$haystack = mb_substr($haystack, 0, $pos) . $replacement
+	. mb_substr($haystack, $pos + $needle_len);
+	$pos = mb_strpos($haystack, $needle, $pos + $replacement_len);
+	}
+	return $haystack;
+	}
+	function mb_ucasefirst($str){
+	$str[0] = mb_strtoupper($str[0]);
+	return $str;
 }
 function genRandomString($length=10, $chars='', $type=array()) {
-//initialize the characters
-$alphaSmall = 'abcdefghijklmnopqrstuvwxyz';
-$alphaBig = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-$num = '0123456789';
-$othr = '`~!@#$%^&*()/*-+_=[{}]|;:",<>.\/?' . "'";
+	//initialize the characters
+	$alphaSmall = 'abcdefghijklmnopqrstuvwxyz';
+	$alphaBig = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+	$num = '0123456789';
+	$othr = '`~!@#$%^&*()/*-+_=[{}]|;:",<>.\/?' . "'";
 
     $characters = "";
     $string = '';
@@ -159,4 +155,4 @@ $othr = '`~!@#$%^&*()/*-+_=[{}]|;:",<>.\/?' . "'";
     $string = substr (str_shuffle($characters), 0, $length);
 
     return $string;
-    }
+}

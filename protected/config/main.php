@@ -56,9 +56,13 @@ return array(
 				'urlSuffix' => '',  
 			    'useStrictParsing'=>true, // В этом режиме будут срабатывать только те правила, которые прописаны в rules, а адреса вроде index.php/site больше не будут распознаваться как корректные
 				'rules'=>array(
-					'<language:[a-z]{2}>/blog/<article:[\w\-]+>'=>'site/blog',
-        				'<language:[a-z]{2}>/<action:\w+>/<keyword:\w+>'=>'site/<action>',
-					'sitemap.xml'=>'site/xml',
+									'<language:[a-z]{2}>/blog/<detail:[\w\-]+>'=>'site/blog',
+									'<language:[a-z]{2}>/vacancies/<detail:[\w\-]+>'=>'site/vacancies',
+									'<language:[a-z]{2}>/portfolio/<detail:[\w\-]+>'=>'site/portfolio',
+									'<language:[a-z]{2}>/products/<detail:[\w\-]+>'=>'site/products',
+									'<language:[a-z]{2}>/services/<detail:[\w\-]+>'=>'site/services',
+									'<language:[a-z]{2}>/<action:\w+>/<keyword:\w+>'=>'site/<action>',
+									'sitemap.xml'=>'site/xml',
 	                                'gii'=>'gii',
 	                                'gii/<controller:\w+>'=>'gii/<controller>',
 	                                'gii/<controller:\w+>/<action:\w+>'=>'gii/<controller>/<action>', 

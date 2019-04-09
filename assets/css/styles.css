@@ -244,7 +244,6 @@ ul li {
   font-size: 1.125rem;
 }
 
-
 #st-2 {
   display: none !important;
 }
@@ -253,20 +252,28 @@ ul li {
   display: inline-block;
 }
 
-.title h1 {
+.title h1, .title .page-name {
   font-size: 48px;
   font-weight: bold;
 }
 
-.news-widget p {
-  font-size: 16px;
-  padding: 5px 0;
-  line-height: 24px;
-  font-family: sans-serif, Arial;
+.bg-color-light-blue {
+  background: #0F2982;
 }
 
-.subscribe-widget {
-  font-family: sans-serif, Arial;
+.news-details .news-content {
+  padding: 31px 34px;
+}
+
+.news-details .news-content h1 {
+  font-size: 1.625rem; 
+}
+
+.news-widget p {
+  font-size: 0.9375rem;
+  font-weight: normal;
+  padding: 5px 0;
+  line-height: 25px;
 }
 
 .title hr {
@@ -344,22 +351,16 @@ header {
   left: 0px;
   width: 100%;
   height: 60px;
-  z-index: 2;
+  z-index: 4;
 }
 
 .my-shadow {
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#031E7C', endColorstr='transparent');
-  /* для IE6-9 */
+  /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#031E7C', endColorstr='transparent');
   background: -moz-linear-gradient(top, #031e7c, transparent);
-  /* для firefox 3.6+ */
   background: -o-linear-gradient(top, #031e7c, transparent);
-  /* для Opera 11.10+ */
   background: -ms-linear-gradient(top, #031e7c, transparent);
-  /* для IE10+, т.к. лично я пока не проверял нужен ли префикс */
   background: linear-gradient(to bottom, #031e7c, transparent);
-  /* W3C */
-  background: -webkit-linear-gradient(left top, left bottom, #031e7c, transparent);
-  /* для webkit-браузеров */
+  background: -webkit-linear-gradient(left top, left bottom, #031e7c, transparent); */
 }
 
 footer {
@@ -381,7 +382,6 @@ footer {
 
 .row div[class*="col-"] {
   height: 100%;
-  /*  border: 1px solid gray;*/
 }
 
 .title-block {
@@ -479,6 +479,8 @@ footer {
   cursor: pointer;
   display: block;
   padding: 0 5px;
+  font-size: 0.9375rem;
+
 }
 
 .dropdown dd ul {
@@ -491,6 +493,7 @@ footer {
   width: auto;
   min-width: 170px;
   list-style: none;
+  z-index: 1;
 }
 
 .dropdown span.value {
@@ -1336,7 +1339,6 @@ QUICK VIEW
 }
 
 .cd-slider-navigation li:last-child {
-  /* equal to the .cd-slider-wrapper margin-right */
   right: 3em;
 }
 
@@ -1568,32 +1570,25 @@ QUICK VIEW
   top: 0;
   right: 0;
   transition: 0.3s;
-}
-
-#myNav {
-  z-index: 3;
+  z-index: 99999;
   display: flex;
   flex-direction: column;
-    /* min-height: calc(100vh - 110px); */
 }
 
-#rightBlock {
-  z-index: 4;
-}
-
-.info-content {
-  opacity: 0;
-  height: 0;
+.container {
+  opacity: 1;
+  height: auto;
   transition: 2.5s;
   margin-bottom: 20px;
+  margin-left: 0;
 }
 
-.info-content h1 {
+.container h1 {
   font-size: 36px;
   font-weight: bold;
 }
 
-.info-content h2 {
+.container h2 {
   font-weight: bold;
 }
 
@@ -1609,7 +1604,7 @@ QUICK VIEW
   transition: 0.5s;
 }
 
-#rightBlock.overlay {
+.rightBlock.overlay {
   background: rgba(17, 42, 133, 1);
 }
 
@@ -1639,25 +1634,22 @@ QUICK VIEW
   color: #f1f1f1;
 }
 
-.info-content {
+.container {
   position: relative;
   text-align: left;
-  margin-top: 166px;
-  margin-left: 86px;
-  width: 75%;
 }
 
-.info-content p {
+.container p {
   font-size: 16px;
   padding: 7px 0;
   line-height: 20px;
 }
 
-.info-content b {
+.container b {
   font-size: 16px;
 }
 
-.info-content ul li {
+.container ul li {
   font-size: 16px;
 }
 
@@ -1666,11 +1658,11 @@ QUICK VIEW
   top: 35px;
   right: 40px;
 }
-
-#rightBlock .closebtn {
-  color: #ff9a00;
+.article-image {
+  width: 355px;
+  max-width: 100%;
+  float: right;
 }
-
 .footer-block {
   position: relative;
   font-family: "gt_walsheim_promedium";
@@ -1734,9 +1726,6 @@ blockquote {
 }
 
 .sidebar-nav {
-  position: absolute;
-  top: 0;
-  margin: 0;
   padding: 0;
   list-style: none;
   font-size: 18px;
@@ -1775,29 +1764,38 @@ blockquote {
   text-decoration: underline;
 }
 
-#rightBlock h2 {
+.rightBlock h2 {
   font-size: 24px;
 }
 
-#rightBlock #content-block ul {
+.content-block {
+  padding-top: 61px;
+  width: 75%;
+  margin-left: 86px;
+}
+
+.rightBlock .content-block ul {
   list-style: none;
-  /*    padding:0;*/
   margin: 0;
 }
 
-#rightBlock #content-block i {
+.rightBlock .content-block i {
   padding-left: 1.9em;
   text-indent: -1.3em;
 }
 
-#rightBlock #content-block ul li:before {
+.rightBlock .content-block #breadCrumb {
+  width:100%;
+}
+
+.rightBlock .content-block ul li:before {
   content: "\25CF";
   color: #ff9a00;
   /* or whatever color you prefer */
   padding-right: 12px;
 }
 
-#rightBlock #content-block ul ul li:before {
+.rightBlock .content-block ul ul li:before {
   content: " \26AC";
 }
 
@@ -1815,17 +1813,17 @@ blockquote {
 .news-widget ul li:before {
   content: "\25CF";
   color: #ff9a00;
-  /* or whatever color you prefer */
   padding-right: 12px;
 }
 
 .news-widget ul li {
-  padding-left: 1.6em;
   text-indent: -1.3em;
+  font-size: 0.9375rem;
 }
 
-.article-date {
-  color: #9ecc3b;
+.news-widget .article-date {
+  font-size: 0.8125rem;
+  display: inline-block;
 }
 
 .news-widget ul ul li:before {
@@ -1881,6 +1879,10 @@ textarea:-moz-placeholder {
   opacity: 1;
 }
 
+a {
+    color: #ff9a00;
+}
+
 /* Right Menu Styles */
 #cssmenu,
 #cssmenu ul,
@@ -1901,7 +1903,7 @@ textarea:-moz-placeholder {
 
 #cssmenu {
   margin: 0px;
-  display: block;
+  display: inline-block;
   padding: 0px;
   text-align: right;
 }
@@ -1979,24 +1981,43 @@ textarea:-moz-placeholder {
   position: fixed !important;
   top: 0;
   right: 0;
+  z-index: 4;
 }
 
 .map-canvas a.closebtn {
   color: black;
 }
 
+/*style the box*/  
+.gm-style .gm-style-iw {
+  border: 3px solid #FF9600;
+  width: 263px;
+  color: #122C84;
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: 0;
+  padding: 12px 23px;
+}  
+
+.gm-style .gm-style-iw-t::after {
+  border-left: 3px solid #FF9600;
+  border-bottom: 3px solid #FF9600;
+}  
+
 a.read_more {
-  position: absolute;
-  color: #ff9600;
-  left: 0;
-  top: 0;
-  margin-left: 15px;
-  margin-top: 45%;
-  font-weight: bold;
-  text-decoration: none;
-  padding-right: 15px;
-  padding-left: 15px;
+    position: relative;
+    color: #ff9600;
+    left: 0;
+    display: inline-block;
+    top: -40px;
+    margin-bottom: -24px;
+    font-weight: bold;
+    text-decoration: none;
+    padding-right: 15px;
+    padding-left: 17px;
 }
+
+.servise-name {padding: 15px 0 5px;}
 
 div.summary {
   position: absolute;
@@ -2021,17 +2042,19 @@ form input.error {
   border: 0px solid transparent !important;
 }
 
-#rightBlock {
-  height: 100%;
-  /*    position: absolute;*/
+.rightBlock {
+  min-height: 100%;
+  position: absolute;
+  z-index: 4;
   top: 0;
   right: 0;
-  overflow: hidden;
-  transition: 0.3s;
   color: #fff;
+  background-color: #122c84;
+  width: 66.666%;
+  padding: 0 0 40px;
 }
 
-#rightBlock .download-presentation {
+.rightBlock .download-presentation {
   height: 64px;
   position: fixed;
   top: 100%;
@@ -2046,7 +2069,6 @@ form input.error {
 }
 
 .item-block-inner .item-image {
-  margin-top: 20px;
   margin-right: 10px;
   width: 70px;
 }
@@ -2062,6 +2084,10 @@ form input.error {
   display: table-cell;
 }
 
+.item-block-inner .item-info h6 {
+  color: #ff9a00;
+}
+
 .item-block-inner .item-info b {
   font-weight: bold;
 }
@@ -2069,12 +2095,13 @@ form input.error {
 .story-block-inner {
   display: inline-flex;
   width: 100%;
-  border: 1px solid #e0e0e0;
+  background: #fff;
   height: 137px;
 }
 
 .story-block-inner img {
   margin: auto;
+  width: auto !important;
 }
 
 .nopa {
@@ -2141,16 +2168,21 @@ form input.error {
   margin-bottom: 40px;
 }
 
+.mb80 {
+  margin-bottom: 80px;
+}
+
 .news-block {
   margin-bottom: 15px;
 }
 
-.news-widget {
+.news-widget .news-block {
   background: #122c84;
 }
 
 .news-widget .news-info {
   display: table-cell;
+  padding: 20px;
 }
 
 .blogs-widget {
@@ -2170,13 +2202,13 @@ form input.error {
   text-decoration: underline;
 }
 
+.news-container .news-block .news-block-inner .news-info .news-topic{
+  display: inline-block;
+}
+
 .news-container .news-block .news-block-inner .news-info .news-topic a {
   font-size: 18px;
   font-family: "gt_walsheim_probold";
-}
-
-.news-container .news-block .news-block-inner .news-image img {
-  border-radius: 5px;
 }
 
 .news-container .news-block .news-block-inner .news-info {
@@ -2184,13 +2216,29 @@ form input.error {
 }
 
 .news-container .news-block .news-block-inner .news-info .news-summary p {
-  margin: 20px 0 13px;
+  margin: 10px 0;
 }
 
 .news-container .news-block .news-block-inner .news-info .news-date {
-  font-size: 12px;
+  font-size: 13px;
   margin-top: 7px;
-  color: #9ecc3b;
+}
+.news-container .news-block .news-block-inner .news-info .news-fbottom .readMore a:hover {
+  color: #ff9a00;
+}
+.news-container .news-block .news-block-inner .news-info .news-fbottom .readMore img {
+  padding-left: 15px;
+}
+
+.back-to {
+  font-size: 1.125rem;
+  cursor: pointer;
+}
+.back-to a {
+   color: #fff;
+}
+.back-to img {
+   padding-right: 15px; 
 }
 
 .icon-angle-right {
@@ -2290,7 +2338,8 @@ form input.error {
 }
 
 .news-widget .news-container .news-block .news-block-inner .news-info .news-topic a {
-  font-size: 24px;
+  font-size: 26px;
+  color: #fff;
 }
 
 .rightsidebar {
@@ -2335,8 +2384,8 @@ input.red-btn:hover {
   background-color: #c20f15;
 }
 
-.green_col {
-  color: #9ecc3b;
+.color-orange {
+  color: #ff9a00;
 }
 
 .nopadding {
@@ -2395,6 +2444,7 @@ span[itemprop="name"]:after {
 
 #breadCrumb ol {
   list-style: none;
+  padding: 0;
 }
 
 #breadCrumb ol li {
@@ -2470,6 +2520,7 @@ span[itemprop="name"]:after {
   display: block;
   height: 713px;
   max-height: 77%;
+  width: auto;
 }
 
 /* Caption of Modal Image */
@@ -2486,7 +2537,14 @@ span[itemprop="name"]:after {
 }
 
 .smallImg {
+  max-width: 500px;
+  width: 100%;
   cursor: pointer;
+}
+
+.article-video {
+  width: 560px;
+  height: 315px;
 }
 
 /* Add Animation */
@@ -2567,15 +2625,56 @@ span.tag {
 }
 
 @media only screen and (max-width: 768px) {
+
+  .rightBlock {
+    position: relative;
+    width: 100%;
+    /* background: transparent; */
+  }
+
+  .line {
+    display: inline-block;
+    vertical-align: middle;
+    height: 2px;
+    width: 187px;
+    background: #ff9a00;
+  }
+  
+  .news-image {
+    padding-bottom: 15px;
+    width: 100%;
+  }
+
+  .news-widget ul {
+    padding: 0;
+  }
+
+  .news-widget ul li {
+    text-indent: 0;
+  }
+
+  .article-video {
+    width: auto;
+    height: auto;
+  }
+  .smallImg {
+    pointer-events: none;
+  }
+  .news-image img {
+    width: 100%;
+  }
   .cd-project-info .cat-image + .cat-desc {
     padding-left: 0;
     float: none;
     width: auto;
   }
 
-  .team_images {
-    margin-left: -15px;
-    margin-right: -15px;
+  .news-details .news-content {
+    padding: 15px 15px;
+  }
+
+  .news-widget ul li {
+    padding-left: 0;
   }
 
   .cd-project-info .cat-info {
@@ -2631,25 +2730,27 @@ span.tag {
     text-align: center;
   }
 
-  #content-block .download-presentation-btn {
+  .content-block .download-presentation-btn {
     font-size: 13px !important;
     height: 34px;
     width: auto;
   }
 
-  .info-content {
-    position: relative;
+  .content-block {
+    padding-top: 0;
+    width: 100%;
+  }
+  
+  .container {
     text-align: left;
-    margin-top: 108px;
-    margin-left: 30px;
-    width: 85%;
+    width: 100%;
   }
 
-  .info-content h1 {
+  .container h1 {
     font-size: 25px;
   }
 
-  .info-content p {
+  .container p {
     font-size: 14px;
   }
 
@@ -2664,11 +2765,6 @@ span.tag {
 
   .overlay {
       overflow-y: auto;
-  }
-
-  a.read_more {
-    margin-top: 37% !important;
-    margin-left: 19px;
   }
 
   div.summary {
@@ -2721,6 +2817,11 @@ span.tag {
     background-image: url("/assets/images/george-bernard-shaw.png");
     background-size: cover !important;
   }
+
+  .title h1, .title .page-name {
+    font-size: 35px;
+  }
+
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -2731,10 +2832,6 @@ span.tag {
 }
 
 @media screen and (max-width: 1024px) and (orientation: portrait) {
-  a.read_more {
-    margin-top: 37%;
-  }
-
   .image-about,
   .image-services,
   .image-works {
@@ -2777,10 +2874,6 @@ span.tag {
   .projects-container ul.row li.custom-grow:hover {
     flex: 5;
     transition: 0.5s;
-  }
-
-  a.read_more {
-    margin-top: 42%;
   }
 }
 
@@ -2938,3 +3031,13 @@ span.tag {
 .navbar {
   padding: 0;
 }
+
+#clientsCarousel .owl-dot span {
+  background: #979797;
+}
+
+#clientsCarousel .owl-dot.active span {
+  background: #FF9A00;
+}
+
+.client-info {display:grid}
