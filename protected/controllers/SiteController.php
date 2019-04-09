@@ -226,8 +226,8 @@ class SiteController extends Controller
               
             $list[] = array(
                         'loc'=>$this->createAbsoluteUrl('/'),
-                        'frequency'=>'monthly',
-                        'priority'=>'0.8',
+                        'frequency'=>'yearly',
+                        'priority'=>'0.5',
                         'path'=>'',
                         );
             

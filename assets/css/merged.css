@@ -11028,6 +11028,7 @@ QUICK VIEW
   height: auto;
   transition: 2.5s;
   margin-bottom: 20px;
+  margin-left: 0;
 }
 
 .container h1 {
@@ -11218,6 +11219,7 @@ blockquote {
 .content-block {
   padding-top: 61px;
   width: 75%;
+  margin-left: 86px;
 }
 
 .rightBlock .content-block ul {
