@@ -4,6 +4,7 @@ class SiteController extends Controller
 {
     
     public $pageDescription;
+    public $shareImage;
     // public function beforeRender()
     // {
 
@@ -336,6 +337,7 @@ class SiteController extends Controller
     }
 
     public function actionServices($detail = null){
+
         if($detail === null) {
             $error = 0;
             $output = array();
@@ -357,6 +359,7 @@ class SiteController extends Controller
             $output = array();
             $cleanUrl = Cleanurls::model()->findByAttributes(array('url'=> $detail));
             $output['model'] = Articles::model()->findByPk($cleanUrl['parent_id']);
+            
             $this->pageDescription = $output['model']->getTranslation($this->Lang)->description;
             $output['parent'] = $this->active = ($output['model']->parent && $output['model']->parent?$output['model']->parent:$output['model']->parent->getparent);
             if (!$output['parent'])
@@ -432,7 +435,6 @@ class SiteController extends Controller
         }
     }
     public function actionProducts($detail = null)  { 
-        
         if($detail === null) {
             $error = 0;
             $output = array();
@@ -453,8 +455,10 @@ class SiteController extends Controller
         } else {
             $output = array();
             $cleanUrl = Cleanurls::model()->findByAttributes(array('url'=> $detail));
-            $output['detail']=$detail;
+            $output['detail'] = $detail;
             $output['model'] = Articles::model()->findByPk($cleanUrl['parent_id']);
+
+            $this->shareImage = $output['model']->getPhoto(0);
             $this->pageDescription = $output['model']->getTranslation($this->Lang)->description;
             $output['parent'] = $this->active = ($output['model']->parent && $output['model']->parent?$output['model']->parent:$output['model']->parent->getparent);
             if (!$output['parent'])
@@ -523,7 +527,6 @@ class SiteController extends Controller
                         }
                     }
                 }
-
             $this->render('detail',$output);
         }
 
@@ -552,6 +555,7 @@ class SiteController extends Controller
             $cleanUrl = Cleanurls::model()->findByAttributes(array('url'=> $detail));
             
             $output['model'] = Articles::model()->findByPk($cleanUrl['parent_id']);
+            $this->shareImage = $output['model']->getPhoto(0);
             $this->pageDescription = $output['model']->getTranslation($this->Lang)->description;
             $output['parent'] = $this->active = ($output['model']->parent && $output['model']->parent?$output['model']->parent:$output['model']->parent->getparent);
             if (!$output['parent'])
@@ -635,6 +639,7 @@ class SiteController extends Controller
             $output = array();
             $cleanUrl = Cleanurls::model()->findByAttributes(array('url'=> $detail));
             $output['model'] = Articles::model()->findByPk($cleanUrl['parent_id']);
+            $this->shareImage = $output['model']->getPhoto(0);
             $this->pageDescription = $output['model']->getTranslation($this->Lang)->description;
             $output['parent'] = $this->active = ($output['model']->parent && $output['model']->parent?$output['model']->parent:$output['model']->parent->getparent);
             if (!$output['parent'])
@@ -751,6 +756,7 @@ class SiteController extends Controller
             $output = array();
             $cleanUrl = Cleanurls::model()->findByAttributes(array('url'=> $detail));
             $output['model'] = Articles::model()->findByPk($cleanUrl['parent_id']);
+            $this->shareImage = $output['model']->getPhoto(0);
             $this->pageDescription = $output['model']->getTranslation($this->Lang)->description;
             $output['parent'] = $this->active = ($output['model']->parent && $output['model']->parent?$output['model']->parent:$output['model']->parent->getparent);
             if (!$output['parent'])

@@ -107,6 +107,18 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("../fonts/sf_pro/SF-Pro-Text-Bold.otf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("../fonts/sf_pro/SF-Pro-Text-Regular.otf");
+  font-weight: 400;
+}
+
 .walsheim-reqular {
   font-family: "gt_walsheim_proregular";
 }
@@ -262,6 +274,9 @@ ul li {
 }
 
 .news-details .news-content {
+  font-family: 'SF Pro Text';
+  font-weight: normal;
+  line-height: 25px;
   padding: 31px 34px;
 }
 
@@ -271,9 +286,10 @@ ul li {
 
 .news-widget p {
   font-size: 0.9375rem;
+  font-family: 'SF Pro Text';
   font-weight: normal;
-  padding: 5px 0;
   line-height: 25px;
+  padding: 5px 0;
 }
 
 .title hr {
@@ -331,6 +347,10 @@ ul li {
   background-size: cover !important;
 }
 
+.news-image img {
+  max-width: 233px;
+}
+
 .shadow-bottom {
   position: fixed;
   height: 110px;
@@ -346,7 +366,7 @@ ul li {
 }
 
 header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0px;
   width: 100%;
@@ -419,7 +439,8 @@ footer {
   border-radius: 10px;
   background-color: #112a85;
   font-size: 1rem;
-  line-height: 1.6em;
+  font-family: 'SF Pro Text';
+  font-weight: normal;
   padding: 0.5rem 3rem;
 }
 
@@ -829,6 +850,9 @@ footer {
 }
 
 .content {
+  font-family: 'SF Pro Text';
+  font-weight: normal;
+  line-height: 25px;
   padding: 27px auto 80px;
 }
 
@@ -1642,8 +1666,10 @@ QUICK VIEW
 
 .container p {
   font-size: 16px;
+  font-family: 'SF Pro Text';
+  font-weight: normal;
+  line-height: 25px;
   padding: 7px 0;
-  line-height: 20px;
 }
 
 .container b {
@@ -1780,6 +1806,12 @@ blockquote {
   margin: 0;
 }
 
+.content-block ul, .content-block ol {
+  font-family: 'SF Pro Text';
+  font-weight: normal;
+  line-height: 25px;
+}
+
 .rightBlock .content-block i {
   padding-left: 1.9em;
   text-indent: -1.3em;
@@ -1790,9 +1822,9 @@ blockquote {
 }
 
 .rightBlock .content-block ul li:before {
-  content: "\25CF";
+  content: "\2022";
+  font-size: 22px;
   color: #ff9a00;
-  /* or whatever color you prefer */
   padding-right: 12px;
 }
 
@@ -1812,7 +1844,8 @@ blockquote {
 }
 
 .news-widget ul li:before {
-  content: "\25CF";
+  content: "\2022";
+  font-size: 22px;
   color: #ff9a00;
   padding-right: 12px;
 }
@@ -2012,7 +2045,9 @@ a.read_more {
     display: inline-block;
     top: -40px;
     margin-bottom: -24px;
+    font-family: 'SF Pro Text';
     font-weight: bold;
+    line-height: 25px;
     text-decoration: none;
     padding-right: 15px;
     padding-left: 17px;
@@ -2025,6 +2060,9 @@ div.summary {
   opacity: 0;
   margin-left: 15px;
   margin-top: 4%;
+  font-family: 'SF Pro Text';
+  font-weight: normal;
+  line-height: 25px;
   top: 0;
   left: 0;
   padding-right: 15px;
@@ -2087,6 +2125,8 @@ form input.error {
 
 .item-block-inner .item-info h6 {
   color: #ff9a00;
+  font-family: 'SF Pro Text';
+  font-weight: normal;
 }
 
 .item-block-inner .item-info b {
@@ -2223,6 +2263,11 @@ form input.error {
 .news-container .news-block .news-block-inner .news-info .news-date {
   font-size: 13px;
   margin-top: 7px;
+}
+.news-container .news-block .news-block-inner .news-info .news-fbottom .readMore a {
+  font-family: 'SF Pro Text';
+  font-weight: normal;
+  line-height: 25px;
 }
 .news-container .news-block .news-block-inner .news-info .news-fbottom .readMore a:hover {
   color: #ff9a00;
@@ -2456,22 +2501,17 @@ span[itemprop="name"]:after {
   text-decoration: none;
 }
 
-#breadCrumb span,
-#breadCrumb a {
-  vertical-align: middle;
-}
-
 #breadCrumb .delimeter {
   background: #ff9a00;
   width: 14px;
   height: 1.6px;
   display: inline-block;
   margin: 0 9px;
-  vertical-align: -webkit-baseline-middle;
 }
 
 #breadCrumb a {
   font-size: 17px;
+  vertical-align: sub;
 }
 
 #breadCrumb a:hover {
@@ -2627,10 +2667,12 @@ span.tag {
 
 @media only screen and (max-width: 768px) {
 
+  .title-block {
+    margin-top: 98px;
+  }
+
   .rightBlock {
     position: relative;
-    width: 100%;
-    /* background: transparent; */
   }
 
   .line {
@@ -2738,7 +2780,7 @@ span.tag {
   }
 
   .content-block {
-    padding-top: 0;
+    padding-top: 15px;
     width: 100%;
     margin-left: 0px;
   }
@@ -2830,10 +2872,18 @@ span.tag {
   }
 }
 
+
+
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .details-more,
   .details-summary {
     font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {  
+  .rightBlock {
+    width: 100%;
   }
 }
 
@@ -2880,6 +2930,12 @@ span.tag {
   .projects-container ul.row li.custom-grow:hover {
     flex: 5;
     transition: 0.5s;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  header {
+    position: fixed;
   }
 }
 
@@ -3027,12 +3083,12 @@ span.tag {
 }
 
 .sitemap > li > ul li::before {
-  content: "\25CF"; 
-  font-size: 20px;
+  content: "\2022";
+  font-size: 22px;
   color: #FF9600; 
   display: inline-block; 
   width: 1em; 
-  margin-left: -2em;
+  margin-left: -1em;
 }
 .navbar {
   padding: 0;

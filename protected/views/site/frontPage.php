@@ -56,7 +56,7 @@
                     <div class="details mx-auto">
                         <div class="details-summary mt-md-4">
                             <?php echo $works->getContentTranslation($this->Lang)->summary?></div>
-                        <a href="/<?php echo $this->Lang?>/works">
+                        <a href="/<?php echo $this->Lang?>/portfolio">
                             <button
                                 class="details-more py-lg-2 walsheim-medium"><?php echo (Utilities::t('See more'));?>
                                 <svg class="arrow-right ml-2" width="21" height="14" viewBox="0 0 21 14" fill="none"
