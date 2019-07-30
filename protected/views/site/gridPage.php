@@ -7,6 +7,7 @@
 <?php if($this->route === 'site/partners' || $this->route === 'site/certificates'):?>
 <div class="sharethis-sticky-share-buttons centered-vertical" ></div>
 <?php endif;?>
+
 <div class='main'>
     <div class="container-fluid">
         <div class="row title-block">
@@ -50,10 +51,19 @@
                 <br>
                 <div class="row">
                     <?php $i=1;foreach($model->articles(array('order'=>'articles.sort asc','scopes'=>array('active'))) as $stuff):?>
-                    <div class="col-12 col-sm-6 col-xl-4 mb20 <?php echo $i%3?'':'third';?>">
+                    <div class="col-12 col-md-6 <?php if (Yii::app()->controller->id=='site' && Yii::app()->controller->action->id!=='partners') echo 'col-xl-4'; ?> mb20 <?php echo Yii::app()->controller->action->id; ?> <?php echo $i%3?'':'third';?>">
                         <div class="item-image">
-                            <?php if ($this->route !== 'site/certificates'):?>
-                            <img src="<?php echo $stuff->getPhoto(0);?>" class="img-responsive"
+                            <?php if (Yii::app()->controller->id=='site' && Yii::app()->controller->action->id=='partners'):?>
+                                <div class="co-projects">
+                                    <?php echo $stuff->getTranslation($this->Lang)->summary;?>
+                                </div>
+                            <?php endif;?>
+                            <?php if ($this->route == 'site/partners'):?>
+                            <img src="<?php echo $stuff->getPhoto(0);?>" class="partner-logo img-responsive"
+                                alt="<?php echo trim($stuff->getTranslation($this->Lang)->name);?> - Kibrit"
+                                title="<?php echo $stuff->getTranslation($this->Lang)->name;?>">
+
+                            <img src="http://kibrit.tech/assets/images/mask.png" class="mask img-responsive"
                                 alt="<?php echo trim($stuff->getTranslation($this->Lang)->name);?> - Kibrit"
                                 title="<?php echo $stuff->getTranslation($this->Lang)->name;?>">
                             <?php else:?>
@@ -73,9 +83,12 @@
                                 <?php echo $stuff->getTranslation($this->Lang)->name;?>
                                 <?php endif;?>
                             </div>
-                            <div class="item-position">
-                                <?php echo $stuff->getTranslation($this->Lang)->summary;?>
-                            </div>
+
+                            <?php if (Yii::app()->controller->id=='site' && Yii::app()->controller->action->id!=='partners'):?>
+                                <div class="item-position">
+                                    <?php echo $stuff->getTranslation($this->Lang)->summary;?>
+                                </div>
+                            <?php endif;?>
                         </div>
                     </div>
                     <?php if (!($i%3)):?>
@@ -92,7 +105,7 @@
                 </div><br>
                 <div class="row">
                     <?php $i=1;foreach($model2->articles(array('order'=>'articles.sort asc','scopes'=>array('active'))) as $stuff):?>
-                    <div class="col-12 col-md-6 col-xl-4 mb20 <?php echo $i%3?'':'third';?>">
+                    <div class="col-12 col-md-6 col-xl-4 mb20 <?php echo $i%2?'':'third';?>">
                         <div class="item-image">
                             <img src="<?php echo $stuff->getPhoto(0);?>" class="img-responsive"
                                 alt="<?php echo trim($stuff->getTranslation($this->Lang)->name);?> - Kibrit"

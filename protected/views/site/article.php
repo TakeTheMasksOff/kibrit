@@ -1,3 +1,4 @@
+<script type="text/javascript" defer src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
 <?php $this->pageTitle = $model->getTranslation($this->Lang)->name." - Kibrit";?>
 <?php
     $this->breadcrumbs = array(
@@ -50,7 +51,7 @@
             <div class="col-0 col-md-2 col-lg-2"></div>
             <div class="col-12 col-md-8 col-lg-8 news-widget news-details">
                 <div class="news-content bg-color-light-blue">
-                    <div class="news-image float-md-right">
+                    <div class="news-image detail-img float-md-right">
                         <?php echo CHtml::link(CHtml::image( $model->getPhotoItem(0)->getPath() , '',array('class'=>'img-responsive thumb'), Yii::app()->controller->createUrl('site/blog', array('id'=>$model->id,'language'=>$this->Lang))));?>
                     </div>
                     <h1><?php echo $model->getTranslation($this->Lang)->name;?></h1>
