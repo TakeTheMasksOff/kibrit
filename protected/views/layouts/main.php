@@ -5,19 +5,16 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <?php  if (!empty($this->pageDescription)){echo '<meta name="description" content="' . $this->pageDescription . '" />';}?>
+        <?php  if (!empty($this->keywords)){echo '<meta name="keywords" content="' . $this->keywords . '" />';}?>
         <link rel="shortcut icon" href="/favicon.ico" />
-        <?//php print_r(Yii::app()->getController()->getAction()->controller->action->id) ?>
-        <link rel="alternate" hreflang="az" href="http://kibrit.tech/az<?=(Yii::app()->getController()->getAction()->controller->action->id != "" && Yii::app()->getController()->getAction()->controller->action->id != 'index') ? '/'.Yii::app()->getController()->getAction()->controller->action->id : '';?>" />
-        <link rel="alternate" hreflang="en" href="http://kibrit.tech/en<?=(Yii::app()->getController()->getAction()->controller->action->id != "" && Yii::app()->getController()->getAction()->controller->action->id != 'index') ? '/'.Yii::app()->getController()->getAction()->controller->action->id : '';?>" />
-        <link rel="alternate" hreflang="ru" href="http://kibrit.tech/ru<?=(Yii::app()->getController()->getAction()->controller->action->id != "" && Yii::app()->getController()->getAction()->controller->action->id != 'index') ? '/'.Yii::app()->getController()->getAction()->controller->action->id : '';?>" />
+        <?php $actionName=Yii::app()->getController()->getAction()->controller->action->id; ?>
         <title><?=(is_array($this->pageTitle)?implode(' | ', $this->pageTitle):$this->pageTitle);?></title>
         
-
         <meta property="og:locale" content="<?=$this->Lang;?>" /> 
         <meta property="og:title" content="<?=(is_array($this->pageTitle)?implode(' - ', $this->pageTitle):$this->pageTitle);?>" /> 
         <meta property="og:description" <?php if (!empty($this->pageDescription)){echo 'content="' . $this->pageDescription . '"';}?>/> 
         <meta property="og:url" content="<?=Yii::app()->request->hostInfo.Yii::app()->request->url?>" /> 
-        <meta property="og:image" content="http://kibrit.tech/assets/images/about.jpg" />
+        <meta property="og:image" <?php if (!empty($this->shareImage)){echo 'content="' . $this->shareImage . '"';} else {echo 'content="http://kibrit.tech/assets/images/shareImg.jpg"';}?>  />
         <!--  ShareThis BEGIN -->
         <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5c5059da058f100011a5b26d&product=sticky-share-buttons' async='async'></script>
         <!--  ShareThis END -->

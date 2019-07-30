@@ -92,8 +92,9 @@ function closeNav() {
         </p>
         <p>
             <?php echo (Utilities::t('Follow us on')); ?> <a target="_blank"
-                href="<?php echo $this->getSetting('facebook'); ?>">Facebook</a> & <a target="_blank"
-                href="<?php echo $this->getSetting('linkedin'); ?>">Linkedin</a></p>
+                href="<?php echo $this->getSetting('facebook'); ?>">Facebook</a>, <a target="_blank"
+                href="<?php echo $this->getSetting('linkedin'); ?>">Linkedin</a>, <a target="_blank"
+                href="<?php echo $this->getSetting('instagram'); ?>">Instagram</a></p>
         <p>2016 - 2018 <i class="icon-copyright" aria-hidden="true"></i> Kibrit</p>
     </div>
 </div>

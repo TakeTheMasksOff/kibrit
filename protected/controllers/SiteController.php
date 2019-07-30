@@ -4,6 +4,8 @@ class SiteController extends Controller
 {
     
     public $pageDescription;
+    public $shareImage;
+    public $keywords;
     // public function beforeRender()
     // {
 
@@ -16,11 +18,18 @@ class SiteController extends Controller
     // }
 
   public function beforeAction($action){
-         if ($this->route === 'site/index' && $this->Lang === "en") {
-                Yii::app()->clientScript->registerLinkTag('canonical', null, Yii::app()->request->getHostInfo());
-         } else {
-                Yii::app()->clientScript->registerLinkTag('canonical', null, Yii::app()->request->getHostInfo() . '/' . Yii::app()->request->getPathInfo());
-         }
+    if ($this->route === 'site/index' && $this->Lang === "en") {
+            Yii::app()->clientScript->registerLinkTag('alternate', null, Yii::app()->request->getHostInfo(), null, array('hreflang' => 'en'));
+            Yii::app()->clientScript->registerLinkTag('alternate', null, Yii::app()->request->getHostInfo(), null, array('hreflang' => 'az'));
+            Yii::app()->clientScript->registerLinkTag('alternate', null, Yii::app()->request->getHostInfo(), null, array('hreflang' => 'ru'));
+            Yii::app()->clientScript->registerLinkTag('canonical', null, Yii::app()->request->getHostInfo());
+    } else {
+            //echo (Yii::app()->request->getHostInfo() . '/' . Yii::app()->request->getPathInfo());
+            Yii::app()->clientScript->registerLinkTag('alternate', null, Yii::app()->request->getBaseUrl(true) . '/en/' . substr(Yii::app()->request->getPathInfo(), 3), null, array('hreflang' => 'en'));
+            Yii::app()->clientScript->registerLinkTag('alternate', null, Yii::app()->request->getBaseUrl(true) . '/az/' . substr(Yii::app()->request->getPathInfo(), 3), null, array('hreflang' => 'az'));
+            Yii::app()->clientScript->registerLinkTag('alternate', null, Yii::app()->request->getBaseUrl(true) . '/ru/' . substr(Yii::app()->request->getPathInfo(), 3), null, array('hreflang' => 'ru'));
+            Yii::app()->clientScript->registerLinkTag('canonical', null, Yii::app()->request->getHostInfo() . '/' . Yii::app()->request->getPathInfo());
+    }
     return parent::beforeAction($action);
   }
 
@@ -126,6 +135,40 @@ class SiteController extends Controller
             $crit->compare('t.parent_id',$output['model']->parent_id);
             $blogs = Articles::Model()->with()->articles()->active()->findAll($crit);
 
+
+            // vacancies 
+            $output['parent'] = $this->active = ($output['model']->parent?$output['model']->parent:$output['model']->parent->getparent);
+            if (!$output['parent'])
+                $output['parent'] = $this->active = Menus::model()->findByAttributes(array('keyword'=>'vacancies'));
+            $crit = new CDbCriteria();
+            $crit->with = array(
+                'parent'=>array(
+                    'together'=>true,
+                    'with'=>array(
+                        'getparent'=>array(
+                            'together'=>true,
+                            'with'=>array(
+                                'getparent'=>array(
+                                    'alias'=>'getparent2',
+                                    'together'=>true,
+                                    'with'=>array(
+                                        'getparent'=>array(
+                                            'alias'=>'getparent3',
+                                            'together'=>true
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    )
+                )
+            );
+            $parent = $output['parent']->id;
+            $crit->addCondition("t.parent_id=$parent or parent.parent_id=$parent or getparent.parent_id=$parent or getparent2.parent_id=$parent",'AND');
+            $crit->compare('t.parent_id',$output['model']->parent_id);
+            $vacancies = Articles::Model()->with()->articles()->active()->findAll($crit);
+            
+
             // services
             $output['parent'] = $this->active = ($output['model']->parent?$output['model']->parent:$output['model']->parent->getparent);
             if (!$output['parent'])
@@ -190,7 +233,7 @@ class SiteController extends Controller
             $crit->compare('t.parent_id',$output['model']->parent_id);
             $portfolio = Articles::Model()->with()->articles()->active()->findAll($crit);
 
-            // portfolio
+            // products
             $output['parent'] = $this->active = ($output['model']->parent?$output['model']->parent:$output['model']->parent->getparent);
             if (!$output['parent'])
                 $output['parent'] = $this->active = Menus::model()->findByAttributes(array('keyword'=>'products'));
@@ -278,13 +321,15 @@ class SiteController extends Controller
             foreach( $portfolio as $row )
             {
                 $item = Articles::model()->cache(3600)->with(array('translations'=>array('alias'=>'translations', 'together'=>true)))->findByPk($row->id);
-                $detail = Cleanurls::getUrlOrSave($item,$item->getTranslation($this->Lang)->name?$item->getTranslation($this->Lang)->name:'',$this->Lang);
-                $list[] = array( 
-                        'loc'=>$this->createAbsoluteUrl('/'.$lang.'/portfolio/'.$detail),
-                        'frequency'=>'weekly',
-                        'priority'=>'1',
-                        'path'=>'/portfolio/'.$detail,
-                );
+                if($item->getTranslation($this->Lang)->body !== "") {
+                    $detail = Cleanurls::getUrlOrSave($item,$item->getTranslation($this->Lang)->name?$item->getTranslation($this->Lang)->name:'',$this->Lang);
+                    $list[] = array( 
+                            'loc'=>$this->createAbsoluteUrl('/'.$lang.'/portfolio/'.$detail),
+                            'frequency'=>'weekly',
+                            'priority'=>'1',
+                            'path'=>'/portfolio/'.$detail,
+                    );
+                }
             }
 
             foreach( $products as $row )
@@ -322,6 +367,18 @@ class SiteController extends Controller
                         'path'=>'/blog/'.$detail,
                 );
             }
+
+            foreach( $vacancies as $row )
+            {
+                $item = Articles::model()->cache(3600)->with(array('translations'=>array('alias'=>'translations', 'together'=>true)))->findByPk($row->id);
+                $detail = Cleanurls::getUrlOrSave($item,$item->getTranslation($this->Lang)->name?$item->getTranslation($this->Lang)->name:'',$this->Lang);
+                $list[] = array( 
+                        'loc'=> $this->createAbsoluteUrl('/'.$lang.'/vacancies/'.$detail),
+                        'frequency'=>'weekly',
+                        'priority'=>'1',
+                        'path'=>'/vacancies/'.$detail,
+                );
+            }
     }           
     }
     public function actionIndex(){
@@ -336,12 +393,14 @@ class SiteController extends Controller
     }
 
     public function actionServices($detail = null){
+
         if($detail === null) {
             $error = 0;
             $output = array();
 
             $output['model'] = $this->active = Menus::model()->findByAttributes(array('keyword'=>'services'));
             $this->pageDescription = $output['model']->getContentTranslation($this->Lang)->description;
+            $this->keywords = $output['model']->getContentTranslation($this->Lang)->keywords;
             $tmp = Menus::model()->with(array('activeChildren'=>array('together'=>true)))->findByAttributes(array('keyword'=>'aboutus'));
             $output['sidebar'] = $output['model']->hasActiveChildren?
                                     $output['model']->activeChildren:
@@ -357,7 +416,9 @@ class SiteController extends Controller
             $output = array();
             $cleanUrl = Cleanurls::model()->findByAttributes(array('url'=> $detail));
             $output['model'] = Articles::model()->findByPk($cleanUrl['parent_id']);
+            
             $this->pageDescription = $output['model']->getTranslation($this->Lang)->description;
+            $this->keywords = $output['model']->getContentTranslation($this->Lang)->keywords;
             $output['parent'] = $this->active = ($output['model']->parent && $output['model']->parent?$output['model']->parent:$output['model']->parent->getparent);
             if (!$output['parent'])
                 $output['parent'] = $this->active = Menus::model()->findByAttributes(array('keyword'=>'services'));
@@ -432,13 +493,13 @@ class SiteController extends Controller
         }
     }
     public function actionProducts($detail = null)  { 
-        
         if($detail === null) {
             $error = 0;
             $output = array();
 
             $output['model'] = $this->active = Menus::model()->findByAttributes(array('keyword'=>'products'));
             $this->pageDescription = $output['model']->getContentTranslation($this->Lang)->description;
+            $this->keywords = $output['model']->getContentTranslation($this->Lang)->keywords;
             $tmp = Menus::model()->with(array('activeChildren'=>array('together'=>true)))->findByAttributes(array('keyword'=>'aboutus'));
             $output['sidebar'] = $output['model']->hasActiveChildren?
                                     $output['model']->activeChildren:
@@ -453,9 +514,12 @@ class SiteController extends Controller
         } else {
             $output = array();
             $cleanUrl = Cleanurls::model()->findByAttributes(array('url'=> $detail));
-            $output['detail']=$detail;
+            $output['detail'] = $detail;
             $output['model'] = Articles::model()->findByPk($cleanUrl['parent_id']);
+
+            $this->shareImage = $output['model']->getPhoto(0);
             $this->pageDescription = $output['model']->getTranslation($this->Lang)->description;
+            $this->keywords = $output['model']->getContentTranslation($this->Lang)->keywords;
             $output['parent'] = $this->active = ($output['model']->parent && $output['model']->parent?$output['model']->parent:$output['model']->parent->getparent);
             if (!$output['parent'])
                 $output['parent'] = $this->active = Menus::model()->findByAttributes(array('keyword'=>'products'));
@@ -523,7 +587,6 @@ class SiteController extends Controller
                         }
                     }
                 }
-
             $this->render('detail',$output);
         }
 
@@ -536,6 +599,7 @@ class SiteController extends Controller
 
             $output['model'] = $this->active = Menus::model()->findByAttributes(array('keyword'=>'portfolio'));
             $this->pageDescription = $output['model']->getContentTranslation($this->Lang)->description;
+            $this->keywords = $output['model']->getContentTranslation($this->Lang)->keywords;
             $tmp = Menus::model()->with(array('activeChildren'=>array('together'=>true)))->findByAttributes(array('keyword'=>'aboutus'));
             $output['sidebar'] = $output['model']->hasActiveChildren?
                                     $output['model']->activeChildren:
@@ -552,7 +616,9 @@ class SiteController extends Controller
             $cleanUrl = Cleanurls::model()->findByAttributes(array('url'=> $detail));
             
             $output['model'] = Articles::model()->findByPk($cleanUrl['parent_id']);
+            $this->shareImage = $output['model']->getPhoto(0);
             $this->pageDescription = $output['model']->getTranslation($this->Lang)->description;
+            $this->keywords = $output['model']->getContentTranslation($this->Lang)->keywords;
             $output['parent'] = $this->active = ($output['model']->parent && $output['model']->parent?$output['model']->parent:$output['model']->parent->getparent);
             if (!$output['parent'])
                 $output['parent'] = $this->active = Menus::model()->findByAttributes(array('keyword'=>'portfolio'));
@@ -635,7 +701,9 @@ class SiteController extends Controller
             $output = array();
             $cleanUrl = Cleanurls::model()->findByAttributes(array('url'=> $detail));
             $output['model'] = Articles::model()->findByPk($cleanUrl['parent_id']);
+            $this->shareImage = $output['model']->getPhoto(0);
             $this->pageDescription = $output['model']->getTranslation($this->Lang)->description;
+            $this->keywords = $output['model']->getContentTranslation($this->Lang)->keywords;
             $output['parent'] = $this->active = ($output['model']->parent && $output['model']->parent?$output['model']->parent:$output['model']->parent->getparent);
             if (!$output['parent'])
                 $output['parent'] = $this->active = Menus::model()->findByAttributes(array('keyword'=>'allnews'));
@@ -684,6 +752,7 @@ class SiteController extends Controller
         $output['model'] = $this->active = Menus::model()->findByAttributes(array('keyword'=>'history'));
 
         $this->pageDescription = $output['model']->getContentTranslation($this->Lang)->description;
+        $this->keywords = $output['model']->getContentTranslation($this->Lang)->keywords;
         $tmp = Menus::model()->with(array('activeChildren'=>array('together'=>true)))->findByAttributes(array('keyword'=>'aboutus'));
         $output['sidebar'] = $output['model']->hasActiveChildren?
                                 $output['model']->activeChildren:
@@ -751,7 +820,9 @@ class SiteController extends Controller
             $output = array();
             $cleanUrl = Cleanurls::model()->findByAttributes(array('url'=> $detail));
             $output['model'] = Articles::model()->findByPk($cleanUrl['parent_id']);
+            $this->shareImage = $output['model']->getPhoto(0);
             $this->pageDescription = $output['model']->getTranslation($this->Lang)->description;
+            $this->keywords = $output['model']->getContentTranslation($this->Lang)->keywords;
             $output['parent'] = $this->active = ($output['model']->parent && $output['model']->parent?$output['model']->parent:$output['model']->parent->getparent);
             if (!$output['parent'])
                 $output['parent'] = $this->active = Menus::model()->findByAttributes(array('keyword'=>'allnews'));
@@ -786,6 +857,7 @@ class SiteController extends Controller
         $output = array();
         $output['model'] = $this->active = Menus::model()->findByAttributes(array('keyword'=>'philosophy'));
         $this->pageDescription = $output['model']->getContentTranslation($this->Lang)->description;
+        $this->keywords = $output['model']->getContentTranslation($this->Lang)->keywords;
         $tmp = Menus::model()->with(array('activeChildren'=>array('together'=>true)))->findByAttributes(array('keyword'=>'aboutus'));
         $output['sidebar'] = $output['model']->hasActiveChildren?
                                 $output['model']->activeChildren:
@@ -801,6 +873,7 @@ class SiteController extends Controller
         $output = array();
         $output['model'] = $this->active = Menus::model()->findByAttributes(array('keyword'=>'partners'));
         $this->pageDescription = $output['model']->getContentTranslation($this->Lang)->description;
+        $this->keywords = $output['model']->getContentTranslation($this->Lang)->keywords;
         $tmp = Menus::model()->with(array('activeChildren'=>array('together'=>true)))->findByAttributes(array('keyword'=>'aboutus'));
         $output['sidebar'] = $output['model']->hasActiveChildren?
                                 $output['model']->activeChildren:
@@ -816,6 +889,7 @@ class SiteController extends Controller
         $output = array();
         $output['model']=  $this->active = Menus::model()->with()->findByAttributes(array('keyword'=>'certificates'));
         $this->pageDescription = $output['model']->getContentTranslation($this->Lang)->description;
+        $this->keywords = $output['model']->getContentTranslation($this->Lang)->keywords;
         $tmp = Menus::model()->with(array('activeChildren'=>array('together'=>true)))->findByAttributes(array('keyword'=>'aboutus'));
         $output['sidebar'] = $output['model']->hasActiveChildren?
                                 $output['model']->activeChildren:
@@ -833,6 +907,7 @@ class SiteController extends Controller
         $output['model']=  $this->active = Menus::model()->with()->findByAttributes(array('keyword'=>'team'));
 
         $this->pageDescription = $output['model']->getContentTranslation($this->Lang)->description;
+        $this->keywords = $output['model']->getContentTranslation($this->Lang)->keywords;
         $tmp = Menus::model()->with(array('activeChildren'=>array('together'=>true)))->findByAttributes(array('keyword'=>'aboutus'));
         $output['sidebar'] = $output['model2']->hasActiveChildren?
                                 $output['model2']->activeChildren:
@@ -849,6 +924,7 @@ class SiteController extends Controller
         $output['parent'] = Menus::model()->findByAttributes(array('keyword'=>'aboutus'));
         $output['model'] = $this->active = Menus::model()->findByAttributes(array('keyword'=>'contacts'));
         $this->pageDescription = $output['model']->getContentTranslation($this->Lang)->description;
+        $this->keywords = $output['model']->getContentTranslation($this->Lang)->keywords;
         $output['formModel'] = new ContactForm;
         if(isset($_POST['ContactForm']))
         {

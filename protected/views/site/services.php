@@ -52,7 +52,7 @@
                 </div>
                 <!-- /#sidebar-wrapper -->
             </div>
-            <div class="col-12 col-md-6 col-lg-8" id="outer">
+            <div class="col-12 col-md-6 col-lg-8 content" id="outer">
 
                 <?php echo $model->getContentTranslation($this->Lang)->body;?>
 

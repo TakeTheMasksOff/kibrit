@@ -258,8 +258,14 @@ function DisableButton(b) {
 (function($) {
   "use strict";
   $(document).ready(function() {
-    if ($("#cssmenu .has-sub li").hasClass("active")) {
-      $("li.has-sub > a")
+    if ($("#cssmenu .company.has-sub li").hasClass("active")) {
+      $("li.company > a")
+        .next()
+        .css("display", "block");
+    }
+
+    if ($("#cssmenu .services.has-sub li").hasClass("active")) {
+      $("li.services > a")
         .next()
         .css("display", "block");
     }

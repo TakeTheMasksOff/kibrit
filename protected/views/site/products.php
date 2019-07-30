@@ -61,14 +61,3 @@ $controller->createUrl('site/products',array('language'=>$controller->Lang,'deta
     </div>
 
 </div>
-
-
-<?php
-$js=<<<JS
-    $(".owl-carousel").owlCarousel({
-      margin: 10,
-      nav: true
-    });
-JS;
-Yii::app()->clientscript->registerScript('clientsCarousel',$js,  CClientScript::POS_LOAD);
-?>

@@ -107,6 +107,18 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("../fonts/sf_pro/SF-Pro-Text-Bold.otf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("../fonts/sf_pro/SF-Pro-Text-Regular.otf");
+  font-weight: 400;
+}
+
 .walsheim-reqular {
   font-family: "gt_walsheim_proregular";
 }
@@ -262,6 +274,9 @@ ul li {
 }
 
 .news-details .news-content {
+  font-family: 'SF Pro Text';
+  font-weight: normal;
+  line-height: 25px;
   padding: 31px 34px;
 }
 
@@ -271,9 +286,10 @@ ul li {
 
 .news-widget p {
   font-size: 0.9375rem;
+  font-family: 'SF Pro Text';
   font-weight: normal;
-  padding: 5px 0;
   line-height: 25px;
+  padding: 5px 0;
 }
 
 .title hr {
@@ -331,6 +347,10 @@ ul li {
   background-size: cover !important;
 }
 
+.news-image img {
+  max-width: 233px;
+}
+
 .shadow-bottom {
   position: fixed;
   height: 110px;
@@ -346,7 +366,7 @@ ul li {
 }
 
 header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0px;
   width: 100%;
@@ -419,7 +439,8 @@ footer {
   border-radius: 10px;
   background-color: #112a85;
   font-size: 1rem;
-  line-height: 1.6em;
+  font-family: 'SF Pro Text';
+  font-weight: normal;
   padding: 0.5rem 3rem;
 }
 
@@ -749,6 +770,7 @@ footer {
   -ms-transform: translateX(-100%);
   -o-transform: translateX(-100%);
   transform: translateX(-100%);
+  font-size: 0px;
 }
 
 .cd-single-project:hover .image-works,
@@ -828,6 +850,9 @@ footer {
 }
 
 .content {
+  font-family: 'SF Pro Text';
+  font-weight: normal;
+  line-height: 25px;
   padding: 27px auto 80px;
 }
 
@@ -1641,8 +1666,10 @@ QUICK VIEW
 
 .container p {
   font-size: 16px;
+  font-family: 'SF Pro Text';
+  font-weight: normal;
+  line-height: 25px;
   padding: 7px 0;
-  line-height: 20px;
 }
 
 .container b {
@@ -1725,6 +1752,45 @@ blockquote {
   color: #eef0f6;
 }
 
+.co-projects {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  font-family: 'SF Pro Text';
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 20px;
+  padding: 22px 19px;
+  transition: visibility 0s linear 0.33s, opacity 0.33s linear;
+  z-index: 2;
+}
+.partners .mask {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  transition: visibility 0s linear 0.33s, opacity 0.33s linear;
+  z-index: 0;
+}
+.partners:hover .co-projects {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+.partners:hover .partner-logo {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+}
+.partners:hover .mask {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0.33s;
+  height: auto;
+}
+.co-projects .co-projects-title {
+  color: #9CCA3B;
+}
+
 .sidebar-nav {
   padding: 0;
   list-style: none;
@@ -1779,6 +1845,12 @@ blockquote {
   margin: 0;
 }
 
+.content-block ul, .content-block ol {
+  font-family: 'SF Pro Text';
+  font-weight: normal;
+  line-height: 25px;
+}
+
 .rightBlock .content-block i {
   padding-left: 1.9em;
   text-indent: -1.3em;
@@ -1789,9 +1861,9 @@ blockquote {
 }
 
 .rightBlock .content-block ul li:before {
-  content: "\25CF";
+  content: "\2022";
+  font-size: 22px;
   color: #ff9a00;
-  /* or whatever color you prefer */
   padding-right: 12px;
 }
 
@@ -1811,7 +1883,8 @@ blockquote {
 }
 
 .news-widget ul li:before {
-  content: "\25CF";
+  content: "\2022";
+  font-size: 22px;
   color: #ff9a00;
   padding-right: 12px;
 }
@@ -2011,7 +2084,9 @@ a.read_more {
     display: inline-block;
     top: -40px;
     margin-bottom: -24px;
+    font-family: 'SF Pro Text';
     font-weight: bold;
+    line-height: 25px;
     text-decoration: none;
     padding-right: 15px;
     padding-left: 17px;
@@ -2024,6 +2099,9 @@ div.summary {
   opacity: 0;
   margin-left: 15px;
   margin-top: 4%;
+  font-family: 'SF Pro Text';
+  font-weight: normal;
+  line-height: 25px;
   top: 0;
   left: 0;
   padding-right: 15px;
@@ -2086,6 +2164,8 @@ form input.error {
 
 .item-block-inner .item-info h6 {
   color: #ff9a00;
+  font-family: 'SF Pro Text';
+  font-weight: normal;
 }
 
 .item-block-inner .item-info b {
@@ -2222,6 +2302,11 @@ form input.error {
 .news-container .news-block .news-block-inner .news-info .news-date {
   font-size: 13px;
   margin-top: 7px;
+}
+.news-container .news-block .news-block-inner .news-info .news-fbottom .readMore a {
+  font-family: 'SF Pro Text';
+  font-weight: normal;
+  line-height: 25px;
 }
 .news-container .news-block .news-block-inner .news-info .news-fbottom .readMore a:hover {
   color: #ff9a00;
@@ -2455,22 +2540,17 @@ span[itemprop="name"]:after {
   text-decoration: none;
 }
 
-#breadCrumb span,
-#breadCrumb a {
-  vertical-align: middle;
-}
-
 #breadCrumb .delimeter {
   background: #ff9a00;
   width: 14px;
   height: 1.6px;
   display: inline-block;
   margin: 0 9px;
-  vertical-align: -webkit-baseline-middle;
 }
 
 #breadCrumb a {
   font-size: 17px;
+  vertical-align: sub;
 }
 
 #breadCrumb a:hover {
@@ -2626,10 +2706,12 @@ span.tag {
 
 @media only screen and (max-width: 768px) {
 
+  .title-block {
+    margin-top: 98px;
+  }
+
   .rightBlock {
     position: relative;
-    width: 100%;
-    /* background: transparent; */
   }
 
   .line {
@@ -2737,8 +2819,9 @@ span.tag {
   }
 
   .content-block {
-    padding-top: 0;
+    padding-top: 15px;
     width: 100%;
+    margin-left: 0px;
   }
   
   .container {
@@ -2822,12 +2905,24 @@ span.tag {
     font-size: 35px;
   }
 
+  .details-more {
+    padding-left: 0;
+    border: 0;
+  }
 }
+
+
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .details-more,
   .details-summary {
     font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {  
+  .rightBlock {
+    width: 100%;
   }
 }
 
@@ -2877,10 +2972,21 @@ span.tag {
   }
 }
 
+@media only screen and (min-width: 1200px) {
+  header {
+    position: fixed;
+  }
+}
+
 @media only screen and (min-width: 1025px) {
   .assets-block {
     min-width: 1016px;
     width: 80%;
+  }
+
+  .co-projects {
+    font-size: 14px;
+    line-height: 25px;
   }
 
   .centered-vertical {
@@ -3021,12 +3127,12 @@ span.tag {
 }
 
 .sitemap > li > ul li::before {
-  content: "\25CF"; 
-  font-size: 20px;
+  content: "\2022";
+  font-size: 22px;
   color: #FF9600; 
   display: inline-block; 
   width: 1em; 
-  margin-left: -2em;
+  margin-left: -1em;
 }
 .navbar {
   padding: 0;
@@ -3041,3 +3147,68 @@ span.tag {
 }
 
 .client-info {display:grid}
+
+
+.pln { color: #000 }  /* plain text */
+
+@media screen {
+  .str { color: #080 }  /* string content */
+  .kwd { color: #008 }  /* a keyword */
+  .com { color: #800 }  /* a comment */
+  .typ { color: #606 }  /* a type name */
+  .lit { color: #066 }  /* a literal value */
+  /* punctuation, lisp open bracket, lisp close bracket */
+  .pun, .opn, .clo { color: #660 }
+  .tag { color: #008 }  /* a markup tag name */
+  .atn { color: #606 }  /* a markup attribute name */
+  .atv { color: #080 }  /* a markup attribute value */
+  .dec, .var { color: #606 }  /* a declaration; a variable name */
+  .fun { color: red }  /* a function name */
+}
+
+/* Use higher contrast and text-weight for printable form. */
+@media print, projection {
+  .str { color: #060 }
+  .kwd { color: #006; font-weight: bold }
+  .com { color: #600; font-style: italic }
+  .typ { color: #404; font-weight: bold }
+  .lit { color: #044 }
+  .pun, .opn, .clo { color: #440 }
+  .tag { color: #006; font-weight: bold }
+  .atn { color: #404 }
+  .atv { color: #060 }
+}
+
+/* Put a border around prettyprinted code snippets. */
+pre.prettyprint { padding: 2px; border: 1px solid #888 }
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums { margin-top: 0; margin-bottom: 0 } /* IE indents via margin-left */
+li.L0,
+li.L1,
+li.L2,
+li.L3,
+li.L5,
+li.L6,
+li.L7,
+li.L8 { list-style-type: none }
+/* Alternate shading for lines */
+li.L1,
+li.L3,
+li.L5,
+li.L7,
+li.L9 { background: #eee }
+
+.prettyprint {
+    background: #fff;
+    padding-bottom: 15px!important;
+    padding-left: 15px !important;
+}
+
+.notice pre code {
+    color: #fff;
+}
+
+.news-image.detail-img img {
+  width: 203px;
+}
