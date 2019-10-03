@@ -63,7 +63,7 @@
                                 alt="<?php echo trim($stuff->getTranslation($this->Lang)->name);?> - Kibrit"
                                 title="<?php echo $stuff->getTranslation($this->Lang)->name;?>">
 
-                            <img src="http://kibrit.tech/assets/images/mask.png" class="mask img-responsive"
+                            <img src="/assets/images/mask.png" class="mask img-responsive"
                                 alt="<?php echo trim($stuff->getTranslation($this->Lang)->name);?> - Kibrit"
                                 title="<?php echo $stuff->getTranslation($this->Lang)->name;?>">
                             <?php else:?>
