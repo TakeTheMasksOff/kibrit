@@ -4,16 +4,16 @@
         (string) $model->getTranslation($this->Lang)->name,
     );
 ?>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkRnJl0N4PafPZwZydn-pOCmSZikd5vq8"
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh4IJfmvFu0UeZWC3U5HeIlM--OOyo_AY"
     type="text/javascript"></script>
 <?php $str=<<<JAVASCRIPT
 
-      var myCenter=new google.maps.LatLng(40.40045, 49.86418);
+      var myCenter=new google.maps.LatLng(40.389992, 49.830150);
       function initialize() {
         var mapCanvas = document.getElementById('map-canvas');
         var mapOptions = {
           center: myCenter,
-          zoom: 12,
+          zoom: 13,
           mapTypeId: google.maps.MapTypeId.ROADMAP
         }
         var map = new google.maps.Map(mapCanvas, mapOptions);
@@ -24,7 +24,7 @@
         });
 
         var contentString = '<div id="google-popup">'+
-            '<span><b>Premium Plaza</b> <br /> 106, Yahya Bakuvi street, Baku, Azerbaijan, AZ1072</span>'+
+            '<span><b>Premium Plaza</b> <br />  102A, Jalil Mammadguluzade street, "City Point" Business Center, Baku, Azerbaijan, AZ1078 </span>'+
             '</div>';
 
         var infowindow = new google.maps.InfoWindow({
