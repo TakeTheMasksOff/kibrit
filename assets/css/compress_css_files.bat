@@ -1,2 +1,2 @@
-type normalize.css bootstrap.css styles.css font-awesome.min.css owl.carousel.min.css owl.theme.default.min.css > merged.css
-call java -jar "C:/OSPanel/domains/kibrit/protected/extensions/packagecompressor/yuicompressor/yuicompressor-2.4.7.jar" "merged.css" -o "C:/OSPanel/domains/kibrit/assets/css/merged.min.css"
+type styles.css > merged.css
+call java -jar "C:/Users/akhalafbayli.KIBRIT/Downloads/OSPanel/domains/kibrit/protected/extensions/packagecompressor/yuicompressor/yuicompressor-2.4.7.jar" "merged.css" -o "merged.min.css"

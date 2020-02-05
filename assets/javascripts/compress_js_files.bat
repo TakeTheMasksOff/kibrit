@@ -1,2 +1,2 @@
-type jquery-3.3.1.min.js base64.js modernizr.js TweenMax.min.js codyhouse.js main.js > merged.js
-call java -jar "C:/OSPanel/domains/kibrit/protected/extensions/packagecompressor/yuicompressor/yuicompressor-2.4.7.jar" "merged.js" -o "C:/OSPanel/domains/kibrit/assets/javascripts/merged.min.js"
+type base64.js codyhouse.js main.js > merged.js
+call java -jar "C:/Users/akhalafbayli.KIBRIT/Downloads/OSPanel/domains/kibrit/protected/extensions/packagecompressor/yuicompressor/yuicompressor-2.4.7.jar" "merged.js" -o "merged.min.js"
